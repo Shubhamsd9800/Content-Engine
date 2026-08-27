@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+:root{--ground:#FFFFFF;--surface:#F7F8FA;--edge:#E3E6EB;--text:#16191D;--text2:#474C55;
+ --muted:#767C87;--accent:#0B6BCB;--ready:#187A4B;--blocked:#C22A2F;--pending:#8A5A00;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1680px;height:940px;background:var(--ground);
+ font-family:"Liberation Sans","DejaVu Sans",sans-serif;color:var(--text);padding:38px 44px}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;
+ border-bottom:3px solid var(--text);padding-bottom:12px;margin-bottom:20px}
+.hd h1{font-size:38px;letter-spacing:-1px;line-height:1}
+.hd .sub{font-size:14px;color:var(--muted);margin-top:5px}
+.hd .rt{text-align:right;font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+
+.cols{display:grid;grid-template-columns:400px 1fr;gap:26px;height:760px}
+
+/* LEFT — brain stack */
+.lyr{border:2px solid var(--text);border-radius:9px;padding:13px 15px;margin-bottom:9px;position:relative}
+.lyr .lbl{font-size:11px;font-weight:bold;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+.lyr .nm{font-size:25px;font-weight:bold;letter-spacing:-.5px;margin:2px 0 8px}
+.lyr .note{font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:7px}
+.files{display:flex;flex-wrap:wrap;gap:5px}
+.f{font-family:"Liberation Mono",monospace;font-size:11px;padding:3px 8px;border-radius:4px;
+ border:1px solid var(--edge);background:var(--surface);color:var(--text2);display:flex;align-items:center;gap:5px}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.d-ok{background:var(--ready)}.d-no{background:var(--blocked)}.d-mid{background:var(--pending)}
+.updn{text-align:center;font-size:12px;color:var(--muted);letter-spacing:2px;margin:2px 0}
+
+/* RIGHT */
+.sec{margin-bottom:16px}
+.sec h2{font-size:14px;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted);
+ margin-bottom:9px;padding-bottom:5px;border-bottom:1px solid var(--edge)}
+
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.inp{border:1px solid var(--edge);border-radius:7px;padding:9px 12px;background:var(--surface)}
+.inp.mine{border-color:var(--accent);border-width:2px;background:#F4F9FF}
+.inp .k{font-size:10px;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase}
+.inp .v{font-size:13.5px;font-weight:bold;margin:2px 0 1px}
+.inp .m{font-size:11px;color:var(--muted)}
+.inp.mine .m{color:var(--accent);font-weight:bold}
+
+.chain{display:flex;align-items:stretch;gap:7px;margin-bottom:11px}
+.nd{flex:1;border:1.5px solid var(--edge);border-radius:7px;padding:10px 8px;text-align:center;background:var(--ground)}
+.nd.key{border-color:var(--accent);border-width:2.5px;background:#F4F9FF}
+.nd.gate{border-color:var(--text);border-width:2px}
+.nd .s{font-size:10px;color:var(--muted);letter-spacing:1.2px}
+.nd .t{font-size:13.5px;font-weight:bold;margin:3px 0 2px}
+.nd .u{font-size:10.5px;color:var(--muted)}
+.ar{display:flex;align-items:center;color:var(--muted);font-size:17px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:11px}
+
+.brief{border:2px solid var(--text);border-radius:8px;padding:12px 15px;background:var(--surface)}
+.brief .h{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent);
+ font-weight:bold;margin-bottom:7px}
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px 10px;
+ font-family:"Liberation Mono",monospace;font-size:10.5px;color:var(--text2)}
+.bgrid b{color:var(--text)}
+
+.kill{border:2px solid var(--blocked);background:#FDF6F6;border-radius:8px;padding:10px 14px;margin-top:9px}
+.kill .h{font-size:11.5px;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase;color:var(--blocked)}
+.kill p{font-size:12.5px;color:var(--text2);margin-top:3px}
+
+.funnel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.fn{border:1px solid var(--edge);border-radius:7px;padding:10px 12px;background:var(--surface)}
+.fn .d{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.fn .n{font-size:16px;font-weight:bold;margin:1px 0 3px}
+.fn .p{font-size:11px;color:var(--text2);line-height:1.4}
+
+.legend{display:flex;gap:20px;align-items:center;margin-top:14px;padding-top:11px;
+ border-top:1px solid var(--edge);font-size:11.5px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:6px}
+</style></head><body>
+
+<div class="hd">
+  <div>
+    <h1>The Content Engine</h1>
+    <div class="sub">Idea → Brief → draft → your rewrite → published. Architecture and current state.</div>
+  </div>
+  <div class="rt">Day 21 · 25 Aug 2026<br>12 ledger entries · 0 posts</div>
+</div>
+
+<div class="cols">
+
+  <!-- LEFT COLUMN -->
+  <div>
+    <div class="lyr">
+      <div class="lbl">Layer 1 · slow, changes rarely</div>
+      <div class="nm">BRAIN</div>
+      <div class="files">
+        <span class="f"><i class="dot d-ok"></i>psychology.md</span>
+        <span class="f"><i class="dot d-ok"></i>strategy.md</span>
+        <span class="f"><i class="dot d-ok"></i>ledger.md · 12</span>
+        <span class="f"><i class="dot d-mid"></i>voice.md · v0</span>
+        <span class="f"><i class="dot d-no"></i>niche.md · pending</span>
+        <span class="f"><i class="dot d-no"></i>swipe.md · empty</span>
+      </div>
+      <div class="note">Operating rules distilled from 22 sources. Everything below reads these.
+      Raw transcripts are archive — never loaded as context.</div>
+    </div>
+
+    <div class="updn">▲ &nbsp; r e a d s &nbsp; ▲</div>
+
+    <div class="lyr" style="border-color:var(--accent)">
+      <div class="lbl">Layer 2 · fast, runs per post</div>
+      <div class="nm">PIPELINE</div>
+      <div class="files">
+        <span class="f">topic-scout</span>
+        <span class="f">creator-analyst</span>
+        <span class="f">brief-builder</span>
+        <span class="f">linkedin-writer</span>
+        <span class="f">script-writer</span>
+        <span class="f">script-doctor</span>
+        <span class="f">niche-finder</span>
+      </div>
+      <div class="note">Seven skills, all written, none yet proven by a published output.
+      RESEARCH gets material and never has an opinion. ANALYZE judges and never fetches.</div>
+    </div>
+
+    <div class="updn">▼ &nbsp; w r i t e s &nbsp; b a c k &nbsp; ▼</div>
+
+    <div class="lyr">
+      <div class="lbl">Layer 3 · grows when something ships</div>
+      <div class="nm">RECORD</div>
+      <div class="files">
+        <span class="f"><i class="dot d-no"></i>published.md</span>
+        <span class="f"><i class="dot d-no"></i>corrections.md</span>
+        <span class="f"><i class="dot d-no"></i>hook-bank.md</span>
+        <span class="f"><i class="dot d-ok"></i>ledger.md</span>
+      </div>
+      <div class="note"><b style="color:var(--text)">After ~20 posts this layer overrides the brain.</b>
+      When evidence contradicts theory, evidence wins and the brain file gets rewritten.
+      Zero posts so far — everything upstream is still theory.</div>
+    </div>
+
+    <div class="kill">
+      <div class="h">The kill rule</div>
+      <p><b>GAPS</b> empty <b>and</b> <b>YOUR STANDING</b> empty → <b>kill.</b>
+      A kill verdict is a successful run. Never write a post to be helpful.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div>
+    <div class="sec">
+      <h2>Four inputs — only two are structurally yours</h2>
+      <div class="inputs">
+        <div class="inp"><div class="k">Input 1 · external</div><div class="v">A trending topic</div><div class="m">Mode A · someone else's material</div></div>
+        <div class="inp"><div class="k">Input 2 · external</div><div class="v">A repo, release or article</div><div class="m">Mode A · someone else's material</div></div>
+        <div class="inp mine"><div class="k">Input 3 · personal</div><div class="v">Your failure, bug or fix</div><div class="m">Mode B · nobody else has your bugs</div></div>
+        <div class="inp mine"><div class="k">Input 4 · personal</div><div class="v">What you built</div><div class="m">Mode B · impossible to make generic</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>The per-post loop</h2>
+      <div class="chain">
+        <div class="nd"><div class="s">01</div><div class="t">brief-builder</div><div class="u">Mode A or Mode B</div></div>
+        <div class="ar">→</div>
+        <div class="nd gate"><div class="s">02</div><div class="t">THE BRIEF</div><div class="u">publish · hold · kill</div></div>
+        <div class="ar">→</div>
+        <div class="nd gate"><div class="s">03</div><div class="t">You approve</div><div class="u">the gate</div></div>
+      </div>
+      <div class="split">
+        <div class="nd"><div class="s">04a · ~35 min</div><div class="t">linkedin-writer</div><div class="u">English · ships today</div></div>
+        <div class="nd"><div class="s">04b · 2–3 hrs</div><div class="t">script-writer</div><div class="u">reel · recorded later</div></div>
+      </div>
+      <div class="chain">
+        <div class="nd key"><div class="s">05</div><div class="t">YOU REWRITE</div><div class="u">the real work · never skipped</div></div>
+        <div class="ar">→</div>
+        <div class="nd"><div class="s">06</div><div class="t">script-doctor</div><div class="u">flags only · never rewrites you</div></div>
+        <div class="ar">→</div>
+        <div class="nd"><div class="s">07</div><div class="t">Publish</div><div class="u">→ work/published.md</div></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>The Brief — the contract between analyze and write</h2>
+      <div class="brief">
+        <div class="h">The writers see only this — never the raw source</div>
+        <div class="bgrid">
+          <div><b>ID</b></div><div><b>TYPE</b></div><div><b>SOURCE</b></div><div><b>CONTENT TYPE</b></div>
+          <div><b>CORE CLAIM</b></div><div><b>EVIDENCE</b></div><div><b>SPECIFICS</b></div><div><b>VERIFICATION</b></div>
+          <div><b>ROOT CAUSE</b></div><div><b>FIX</b></div><div><b>PROOF</b></div><div><b>GAPS</b></div>
+          <div><b>YOUR STANDING</b></div><div><b>TRUST LEG</b></div><div><b>VILLAIN</b></div><div><b>FUNNEL SLOT</b></div>
+          <div><b>AUDIENCE</b></div><div><b>VERDICT</b></div><div><b>ROUTE</b></div><div>&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2>The funnel — every post declares a slot before it is written</h2>
+      <div class="funnel">
+        <div class="fn"><div class="d">Monday · attraction</div><div class="n">TOFU</div>
+          <div class="p">Make new people find you. Hot takes, industry opinions, free value resources.</div></div>
+        <div class="fn"><div class="d">Wednesday · authenticity + authority</div><div class="n">MOFU</div>
+          <div class="p">Make them believe you. Lessons, mistakes, tutorials, a real build.</div></div>
+        <div class="fn"><div class="d">Friday · the offer</div><div class="n">BOFU</div>
+          <div class="p">What you build and for whom. At zero followers, state it — don't ask for the sale.</div></div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><i class="dot d-ok"></i> built</span>
+      <span><i class="dot d-mid"></i> partial / v0</span>
+      <span><i class="dot d-no"></i> empty or pending</span>
+      <span style="margin-left:auto;font-style:italic">The model has the capability. The input layer is the bottleneck.</span>
+    </div>
+  </div>
+
+</div>
+</body></html>

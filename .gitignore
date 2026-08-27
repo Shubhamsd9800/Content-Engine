@@ -1,0 +1,50 @@
+*.tmp
+.DS_Store
+Thumbs.db
+node_modules/
+
+# ---- added by daily-push ----
+
+# Private-by-location. Put anything with real contact details in here and it never reaches git. This is the safe place, by convention.
+private/
+_local/
+**/private/
+**/_local/
+
+# Known client-research filenames. Exact names, not topic words -- a wildcard on words like 'outreach' or 'leads' hides real working files.
+*client-brief.md
+client-candidates-*.md
+seed-data.md
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*_rsa
+credentials.json
+token.json
+*.pfx
+
+# Machine noise
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+desktop.ini
+Scheduled/
+.fuse_hidden*
+*.lock
+!package-lock.json
+
+# Large or regenerable artifacts -- rebuild these, do not version them.
+*.zip
+brand/proof/
+dist/
+build/
+.pytest_cache/
+
+# Pending manual deletion -- superseded drafts held here because this mount can't delete.
+# Excluded from git so dead content doesn't enter history. Nothing here is deleted.
+_to_delete/
