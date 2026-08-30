@@ -144,7 +144,16 @@ controls for audience size, algorithm and topic at once, which is exactly what m
 comparing two different creators meaningless and comparing a creator to themselves
 meaningful.
 
-**c.** Flag outliers at **2× that creator's median engagement or more**, at most 3.
+**c.** Take that creator's **top 3 pieces by engagement**. Record each piece's `ratio`
+(engagement ÷ median) and the creator's **GAP** (highest ÷ median). Selection is by **rank**;
+the ratio is recorded, never used as a gate.
+
+> **Superseded Day 25 — the 2× bar.** It was picking pieces *and* judging creators at the same
+> time, and as a picking rule it cannot promise three: `nick_saraev`'s first live run gave one
+> post over 2×, and an 8% move in his median would have given none, from the same twelve posts.
+> The teardown needs three pieces; a threshold cannot guarantee three. The creator-level
+> judgement moved to **GAP**, which is recorded here and acted on in the cut, never inside a
+> fetch step.
 
 > **Superseded Day 24.** This round originally split *reach outliers* from *resonance
 > outliers* — the second needed a like-to-view ratio. **There are no view counts**, so the

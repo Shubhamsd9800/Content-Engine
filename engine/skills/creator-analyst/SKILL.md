@@ -39,8 +39,14 @@ metrics.csv                that creator's full history, all runs
 
 | | | |
 |---|---|---|
-| **WINNER** | outlier **≥ 2.0×** that creator's own median, max 3 | full transcript |
+| **WINNER** | that creator's **top 3 pieces by engagement** — selected by rank in `scout`, never re-judged here | full transcript |
 | **NORMAL** | everything else scout fetched | caption + numbers only |
+
+**Captions: read `FULL CAPTION`, never the truncated line.** OpenCLI cuts every caption at 100
+characters, mid-word — the CTA and the offer usually sit past the cut. The truncated line exists
+to identify a post, not to be analysed. If `FULL CAPTION` is blank for a winner, **say the
+caption was not collected and analyse the transcript alone.** Never infer a CTA from a sentence
+that was cut off.
 
 **The NORMAL rows are not filler.** Two things in this skill are impossible without them:
 *"used in n of 10"* needs ten pieces to count across, and *"hits vs their own misses"* needs
@@ -118,7 +124,9 @@ yet.** Note which, every time.
 it is done by comparing them **to themselves** — which controls for audience, algorithm and
 topic, everything that makes cross-creator comparison meaningless.
 
-The `WINNER` rows beat this creator's own median by 2× or better; the `NORMAL` rows did not.
+The `WINNER` rows are this creator's **three highest-engagement pieces**; the `NORMAL` rows are
+everything else they posted. Each row carries its `ratio` against their own median — read it as
+context for how far ahead a winner actually was, never as a bar something had to clear.
 **What do the winners have that the others don't** — hook mechanic, awareness level, format,
 length, proof on screen, emotional register? What do the misses share?
 

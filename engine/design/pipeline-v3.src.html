@@ -122,6 +122,7 @@
     <div class="stamp">
       <b>Day 25</b> · 30 August 2026<br>
       Watchlist <b>22 creators</b> · derived, not picked<br>
+      Selection: <b>top 3 by engagement</b> · rev. Day 25<br>
       Posts published to date: <b>0</b>
     </div>
   </div>
@@ -195,8 +196,8 @@
         <div class="num now">A5</div>
         <div class="body">
           <div class="row1"><span class="nm"><code>scout</code> — fetch &amp; rank</span><span class="badge cc">CLAUDE CODE ONLY</span><span class="st next">▶ next</span></div>
-          <div class="what">Per creator: list 12 recent pieces with likes + comments · compute <b>that creator's own median</b> · flag outliers at <b>≥ 2× median</b>, max 3 · tag peer / buyer. Hands over <b>every</b> piece fetched, flagged WINNER or NORMAL — the cap of 3 caps transcription, not the handoff.</div>
-          <span class="out">→ <b>&lt;handle&gt;/raw/metrics.csv</b> + <b>pieces.md</b></span>
+          <div class="what">Per creator: list 12 recent pieces with likes + comments · compute <b>that creator's own median</b> · take the <b>top 3 by engagement</b> (rank, not threshold) · record <b>GAP</b> = best ÷ median · tag peer / buyer. Hands over <b>every</b> piece fetched, flagged WINNER or NORMAL — selecting 3 caps transcription, not the handoff.</div>
+          <span class="out">→ <b>&lt;handle&gt;/raw/metrics.csv</b> + <b>pieces.md</b> · GAP per creator</span>
         </div>
       </div>
 
@@ -222,7 +223,7 @@
         <div class="num">A8</div>
         <div class="body">
           <div class="row1"><span class="nm"><code>creator-analyst</code> — teardown</span><span class="badge cw">COWORK</span><span class="st">never run</span></div>
-          <div class="what">Never goes online. Timestamp-maps each piece, names the mechanic against <code>psychology.md</code>, records awareness level, RETENTION, REWARD, reader, and the downgrade to your standing. Compares hits to <b>their own misses</b>.</div>
+          <div class="what">Never goes online. Timestamp-maps each piece, names the mechanic against <code>psychology.md</code>, records awareness level, RETENTION, REWARD, reader, and the downgrade to your standing. Compares the top 3 to <b>their own misses</b> — never re-judges which pieces were selected.</div>
           <span class="out">→ <b>&lt;handle&gt;/teardown.md</b> · one creator per run</span>
         </div>
       </div>
@@ -326,10 +327,11 @@
   <!-- STRIPS -->
   <div class="strips">
     <div class="card strip">
-      <h3>Three limits that shape every step</h3>
+      <h3>Four limits that shape every step</h3>
       <div class="li"><b>No view counts.</b> Instagram exposes none through any free route. <code>engagement = likes + comments</code> — a <b>proxy</b>, and it is never called reach, in any file or any post.</div>
       <div class="li"><b>Twelve posts per run.</b> <code>--limit</code> does not raise it. The accumulating <code>metrics.csv</code> is the fix, not a flag.</div>
       <div class="li"><b>No post URLs</b> from any read command. All 23 checked. Step A6 is manual by design — it is not a bug to be engineered away.</div>
+      <div class="li"><b>No finished post.</b> New audience arrives daily and old posts keep collecting — a post is finished only from the creator's side. So no age correction is applied; selection is <b>top 3 by rank</b>, which needs no cutoff, and <code>metrics.csv</code> accumulates so a late riser is picked up on a later run.</div>
     </div>
 
     <div class="card strip">

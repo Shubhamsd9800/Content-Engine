@@ -175,11 +175,61 @@ purely because engagement had not accumulated yet.
 All 23 Instagram subcommands were checked. `user` and `saved` both omit URLs. `search` returns
 a `url` column, but **only for profiles, never for posts.**
 
-**Consequence:** `pieces.md` carries the post **INDEX**, and the URL is copied by hand — about
-two per creator, roughly fifteen minutes a month. **This is the only manual step in Pipeline A.**
+**Consequence:** `pieces.md` carries the post **INDEX**, and the URL is copied by hand — three
+per creator, roughly fifteen minutes a month.
 
 **The index is reliable.** Verified: `opencli instagram save nick_saraev --index 9` saved the
 post whose likes matched index 9 in the listing exactly.
+
+### LIMIT 4 — captions truncate at exactly 100 characters
+
+**Verified Day 25 against the raw tool output, not against `scout`:**
+
+```
+opencli instagram user nick_saraev -f json --limit 1
+→ "caption": "Comment \"SKILL\" to get Nvidia SkillSpector to protect your Claude Code from getting hacked.   If you"
+                                                                                              ↑ cut, mid-word, at 100
+```
+
+Every caption comes back at exactly 100 characters. **No flag raises it** — the data arrives
+already cut, so no skill can print what it never received.
+
+**Why it matters:** on Instagram the caption carries the **CTA and the offer**.
+`Comment "DESIGN" to get…` is a mechanic worth studying, and the rest of it sits past the cut.
+
+**Consequence:** the truncated caption identifies a post and nothing else. The full caption is
+copied by hand from the post page — **the same page, the same trip as the URL**, so it costs no
+extra navigation. Collected only for the winners of creators actually being torn down, never
+for all 22. `pieces.md` carries a blank `FULL CAPTION:` line for it, and `creator-analyst` is
+told to say so rather than analyse the truncated line when it is empty.
+
+**LIMITS 3 and 4 together are the manual step in Pipeline A** — one visit per winner post,
+two things copied. Neither is a bug to be engineered away.
+
+### LIMIT 5 — pinned posts sit at the top of the grid, whatever their age
+
+**Instagram allows up to 3 pinned posts.** `user` returns **grid order**, so a pinned post
+occupies index 1, 2 or 3 no matter how old it is. Found live on Day 25, batch 1:
+
+| Handle | Pinned at index | Age |
+|---|---|---|
+| `techie007.dev` | 1 | **757 days** |
+| `theautomationguy.ai` | 1, 2 | 166 and 306 days |
+| `_roshnichellani` | 1 | 327 days |
+| `thevibefounder` | 1 | 189 days |
+
+`nick_saraev` and `forseth.ai` had none — their dates descend cleanly from index 1.
+
+**There is no flag and no field marking a post as pinned.** It is detected from date order:
+find the longest run at the end of the list whose dates never increase; anything before it is
+pinned. Never mark more than 3.
+
+**Why it matters:** a pinned post is the creator's **own pick of their best work**, and it is
+usually old, from a smaller account. Left in, it takes teardown slots while discovering nothing
+(`theautomationguy.ai`'s two pinned sat at 17.61× and 11.00×), and it drags the median across
+two eras of the account. `scout` excludes pinned posts from the median and the top 3, and still
+hands them over in their own section — **what a creator chooses to pin is a signal, it just
+never sets the baseline.**
 
 ### Other subcommands, and their state here
 
@@ -306,7 +356,9 @@ Say what is different about this run, and nothing else:
 - `work/creators/<slug>/raw/metrics.csv` gained rows, and **no duplicate
   `creator + date + caption`**
 - `work/creators/<slug>/raw/pieces.md` holds **every post fetched**, flagged `WINNER` or
-  `NORMAL`, with the post **INDEX** on each. Winners are outliers at **≥ 2.0×**, at most 3.
+  `NORMAL`, with the post **INDEX** on each. Winners are that creator's **top 3 by
+  engagement** — rank, not a threshold. `pieces.md` also carries **GAP** (highest ÷ median)
+  for the creator, and a `FLAT` note when GAP < 1.5.
   **A pieces.md containing only winners is a failed run** — the control set is what makes
   "5 of 10" and "hits vs misses" possible downstream.
 - Any creator with **fewer than 8 posts** was skipped, not scored

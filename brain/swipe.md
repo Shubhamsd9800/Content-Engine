@@ -45,8 +45,18 @@ Koe's method, run through the Pipeline A tooling. This is the standard for this 
 3. **Selection is arithmetic, never taste.** Per creator: the `median` of their recent
    pieces, then `outlier = engagement ÷ median`, where **`engagement = likes + comments`**.
    Instagram exposes no view counts through any free route — the number is a **proxy** and
-   must be named as one, never called reach. Keep pieces at **2× or better**, at most 3 per
-   creator. **No piece enters a teardown because somebody liked it.**
+   must be named as one, never called reach. **Take that creator's top 3 pieces by
+   engagement** — rank, not threshold. **No piece enters a teardown because somebody liked
+   it.**
+
+   > **Revised Day 25 — the 2× bar was removed from selection.** It was doing two jobs: picking
+   > which pieces to study, and judging whether a creator was worth studying. As a picking rule
+   > it cannot promise three pieces — `nick_saraev`'s first live run produced one post over 2×,
+   > and an 8% shift in his median would have produced none, from identical numbers. The ratio
+   > is still computed and still recorded on every piece. **It is a number, not a gate.**
+   > The creator-level question moved to **GAP** — highest ÷ median, recorded per creator and
+   > used to rank the teardown queue: no distance between a creator's best and typical piece
+   > means the teardown's core question has no *"didn't"* to point at.
 4. **Anomalies get transcribed — but the ordinary pieces are still handed over.** The cap of
    3 caps transcription, not the handoff. A teardown promotes a shape at **5 of 10** and it
    answers *"what do the winners have that the others don't"* — neither is possible with three

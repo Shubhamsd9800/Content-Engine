@@ -1,6 +1,6 @@
 # workflow-status.md — the engine, step by step, with live status
 
-**Last revised:** Day 24, 28 Aug 2026.
+**Last revised:** Day 25, 30 Aug 2026.
 **What this file is:** the running map of the engine and where every step actually stands.
 Companion to `engine/design/blueprint.md` — the single design document. This file holds the live task list; the blueprint holds the design.
 **This file carries STATE, not design.** When they disagree: they win on design, this wins on
@@ -40,11 +40,11 @@ trigger. Do not re-merge them.
 | Step | What happens | Output | Status |
 |---|---|---|---|
 | A1 | CAPTURE — creators entered in the Creator Capture artifact, exported | `work/creators/creator-roster.md` | ✅ 32, Day 23 |
-| A2 | **QUALIFY** — five written gates cut the roster to a watchlist | `work/creators/qualified.md` | 🟡 **skill built Day 24, never run** |
-| A3 | FETCH — recent posts + engagement per creator | `<slug>/raw/metrics.csv` | ⬜ **`scout` NOT BUILT** — the last missing piece |
-| A4 | RANK — median, then outlier = engagement ÷ median, keep ≥ 2× | `<slug>/raw/pieces.md` | ⬜ lives inside `scout` |
+| A2 | **QUALIFY** — five written gates cut the roster to a watchlist | `work/creators/qualified.md` | ✅ **ran twice, Day 24** — PASS 1 + PASS 2 → `handles.md` |
+| A3 | FETCH — recent posts + engagement per creator | `<slug>/raw/metrics.csv` | ▶ **`scout` BUILT Day 24. Batch 0 is the next action, Day 25.** |
+| A4 | RANK — median, then outlier = engagement ÷ median, keep ≥ 2× | `<slug>/raw/pieces.md` | ▶ lives inside `scout` — runs with A3 |
 | A5 | LINKS — Shubham copies ~2 post URLs per creator | URLs in `pieces.md` | ⚠️ manual, by design — OpenCLI returns no URLs |
-| A6 | TRANSCRIBE — download the winners, run Whisper | `<slug>/raw/reel-NN.md` | ⚠️ tools installed, **never run on a reel** |
+| A6 | TRANSCRIBE — download the winners, run Whisper | `<slug>/raw/reel-NN.md` | ⛔ **THE BLOCKER on `swipe.md`.** `download` + Whisper: neither has ever been executed. |
 | A7 | TEARDOWN — `creator-analyst` | `<slug>/teardown.md` | 🟡 skill fixed Day 23, never run |
 | A8 | PROMOTE — 5+ of 10 AND survives the downgrade | `brain/swipe.md` | 🟡 rule exists, file empty |
 
@@ -59,6 +59,45 @@ through the full chain: `creator-roster.md` (32) → `qualify` PASS 1 → `quali
 Shubham's review in the verdict board → `decisions.md` (11 overturns) → `qualify` PASS 2.
 **Pipeline A is unblocked. `scout` is the next step, and it runs in Claude Code.**
 `qualify` replaces it.
+
+---
+
+## THE DAY 25 PLAN — agreed, in order
+
+**Scrape wide, rank on evidence, tear down few.** Scouting is cheap; teardown is not. That is
+the whole logic of the ordering, and it is the Day 24 split (**scrape scope** vs **teardown
+budget**) applied to a working day.
+
+| Phase | What | Surface | Output |
+|---|---|---|---|
+| **1** | `scout` all 22 — batch 0 alone first, then batches 1–4 with a pause between | Claude Code | 22 × `raw/metrics.csv` + 22 × `raw/pieces.md` |
+| **2** | **THE CUT** — rank all 22 on the numbers, no tools | Cowork | `TEARDOWN QUEUE` section in `handles.md` |
+| **3** | Depth, one creator at a time, top of queue first | mixed — A6 manual, A7 Claude Code, A8/A9 Cowork | `teardown.md` → entries in `brain/swipe.md` |
+
+**Phase 2 ranks on, and only on:**
+- **outlier ratio** — max engagement ÷ that creator's own median. The one that matters: a
+  creator sitting inside 1.2× of their median across 12 posts has **no gap between hit and miss**
+  for a teardown to explain, and is unlearnable however good the content feels.
+- how many posts clear **2×** — zero outliers means the same thing
+- **volume** — under 8 posts is skipped, not scored
+- whether hits **cluster or scatter** — clustered suggests a repeatable shape
+- **column coverage** — the queue keeps buyer, peer and craft represented. Craft is the scarcest
+  column; a purely numeric ranking that wipes it out is a bad ranking.
+
+**Nothing is deleted by the cut.** All 22 stay scraped — `metrics.csv` accumulates and costs
+nothing to keep. The cut produces an **order**, not a shorter watchlist. A creator can be pulled
+forward later without re-running anything.
+
+**The teardown count is decided in Phase 2, against real numbers.** Shubham's position going in
+is 10–15. Claude argued for 3–5 first — the promotion rule is *5 of 10 within one creator*, so
+one creator can produce entries, and 4 teardowns is ~3–6 hours ending with a non-empty
+`swipe.md` and a publishable post, where 12 is ~15 hours of input with no output. **Recorded as
+a disagreement, not a decision.** The numbers settle it.
+
+**The risk this ordering carries, stated plainly:** A6 is untested. If `download` + Whisper do
+not work, 22 scrapes are inert data and that is discovered at the end of Phase 1 rather than the
+start. Accepted knowingly — the first teardown in Phase 3 is also the test of A6, and it runs
+before teardown 2.
 
 ---
 
@@ -104,11 +143,11 @@ from publishing.**
 
 | Skill | State | Pipeline |
 |---|---|---|
-| `qualify` | 🟡 **built Day 24, never run** | A — the roster cut |
+| `qualify` | ✅ **ran twice, Day 24** | A — the roster cut |
 | `creator-analyst` | 🟡 fixed Day 23, never run | A — the teardown |
 | `topic-scout` · `brief-builder` · `script-writer` · `linkedin-writer` · `script-doctor` | 🟡 built, never run | B |
 | `niche-finder` | ✅ has run | setup |
-| **`scout`** | ⬜ **NOT BUILT** | A — fetch + rank |
+| **`scout`** | ✅ **built Day 24**, first live run Day 25 | A — fetch + rank |
 | **`thought-partner`** | ⬜ NOT BUILT | B — idea input 6 |
 
 ---
@@ -140,7 +179,7 @@ from publishing.**
 
 | # | Gap | Cost |
 |---|---|---|
-| 1 | **`scout` not built** | Pipeline A cannot run at all |
+| 1 | ~~**`scout` not built**~~ **CLOSED Day 24** — built, and skills junctioned into `%USERPROFILE%\.claude\skills` Day 25 | — |
 | 2 | **No FORMAT field on the Brief** | Nothing decides whether a piece is an idea, advice, a story, a build or a breakage. `script-writer` is told who and what, never *what kind of thing*. |
 | 3 | ~~`brain/reference/frameworks/` orphaned~~ **— RETRACTED Day 24** | **Not a gap.** Each file carries a `Feeds:` line: frameworks feed the BRAIN, skills read the brain. Verified by grep — Zeigarnik, peak-end, pratfall, hook modifiers, curse-of-knowledge and IKEA are all in `psychology.md`; TOFU/MOFU/BOFU is in `strategy.md`. The design works. **What the check DID find:** `searchable vs shareable` never crossed over. Added to `strategy.md` Day 24. `mimetic desire` also missing — left out deliberately, no current job. |
 | 4 | `work/briefs/` and `work/drafts/` are empty dirs | Git does not track empty folders — they will not survive a clone. Needs `.gitkeep`. |
@@ -158,14 +197,14 @@ from publishing.**
 | 1 | Delete the stray `.exe` and `.log`; add `*.exe` `*.log` to `.gitignore` | Shubham (deletion blocked on the mount) |
 | 2 | ~~`.gitkeep` into `briefs/` and `drafts/`~~ **DONE Day 24** | — |
 | 3 | ~~Point `CLAUDE.md` at `tooling.md`~~ **DONE Day 24** | — |
-| 4 | **Build `scout`** | nothing — written against `tooling.md` |
-| 5 | Run `qualify` on all 32 → Shubham reviews → rebuild `handles.md` | task 4 not required |
+| 4 | ~~**Build `scout`**~~ **DONE Day 24** | — |
+| 5 | ~~Run `qualify` → review → rebuild `handles.md`~~ **DONE Day 24** — 22 handles | — |
 | 6 | Run `scout`, fetch winners, transcribe **one** creator | tasks 4, 5 |
 | 7 | First teardown → **first entry in `swipe.md`** | task 6 |
 | 8 | Fix the FORMAT gap — taxonomy + Brief field + both writers | needs a format source |
 | 9 | Build `thought-partner` | nothing |
 | 10 | ~~Reconcile `README.md` and `architecture.md`~~ **DONE Day 24** — architecture.md folded into blueprint.md and archived | nothing |
-| 11 | Second push — everything since `5bf0c08` | Shubham |
+| 11 | ~~Second push~~ **DONE Day 25** — `06c8eb5` on `origin/pipeline-v3` | — |
 | 12 | Replace the stale claude.ai project description | Shubham |
 
 ---
