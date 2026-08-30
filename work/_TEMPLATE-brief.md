@@ -62,7 +62,7 @@ and how they are wired, getting AI to produce work that doesn't look AI-generate
 what getting it wrong costs · **4** AI and industry news with my opinion, founders'
 journeys told from the reader's position · **5** never.
 
-**The mix is 3-2-2 per seven pieces.** Check the last six entries in `work/published.md`
+**The mix is 3-2-2 per seven pieces.** Check the last six entries in `work/log/published.md`
 before assigning. If three ring-1 pieces already shipped in this seven, this one is ring
 2–3 or 4.
 

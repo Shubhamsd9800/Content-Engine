@@ -249,7 +249,7 @@ practitioner's level of awareness.
 
 ## THE KOE CONFLICT — settled, not averaged
 
-Dan Koe contradicts himself across two sources, both in `sources/`.
+Dan Koe contradicts himself across two sources, both in `brain/reference/transcripts/`.
 
 - **Trust Matrix:** *"Forget about your niche for now. Forget about your bio and
   banner… there are plenty of people with no bio and a blank profile picture doing

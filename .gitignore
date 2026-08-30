@@ -45,6 +45,12 @@ dist/
 build/
 .pytest_cache/
 
-# Pending manual deletion -- superseded drafts held here because this mount can't delete.
-# Excluded from git so dead content doesn't enter history. Nothing here is deleted.
+# Superseded drafts, old backups and downloaded junk. Held on disk because this mount
+# cannot delete; excluded from git so dead content never enters history. Nothing here is
+# deleted -- empty it from Explorer whenever you want.
+archive/
 _to_delete/
+
+# Installers and logs -- never versioned.
+*.exe
+*.log

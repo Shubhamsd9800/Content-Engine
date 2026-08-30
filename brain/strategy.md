@@ -28,12 +28,23 @@ it survives being wrong, because reporting that a tool disappointed him **is** t
 This is the load-bearing decision in the whole engine.
 
 ```
-PEERS   students, engineers, working professionals   →  buy the PRODUCT
-BUYERS  small business owners, solo founders          →  buy the SERVICE
-        with no technical person
+PEER   someone trying to BUILD something and stuck      →  buys the PRODUCT
+       defined by STATE, not job title. codes or doesn't; irrelevant.
+       often procrastinating on the build rather than blocked by it.
+       wants the craft.
+
+BUYER  someone with a BUSINESS PROBLEM who wants it gone →  buys the SERVICE
+       wants the outcome, not the method.
+       corporate and small-business. never consumer.
 ```
 
+**These are often THE SAME PERSON at two different moments.** A working professional trying to
+start a café, a brand or a CRM is a peer on Monday and a buyer the week he runs out of evenings.
+
 **The peers are not a leak. They are the second revenue line.**
+
+**Which one a piece reaches is decided by the opening, not the topic** — see THE HOOK-END RULE
+in `niche.md`. Full definitions live there; this file must not restate them.
 
 Most creators run one or the other. Tooling creators reach peers and sell products; outcome
 creators reach buyers and sell services. Running both here is deliberate.
@@ -49,6 +60,37 @@ creators reach buyers and sell services. Running both here is deliberate.
   keep.
 - **Roughly 60–70% of output at the 3-2-2 mix reaches peers.** That is expected, not a
   failure. It is the shape the two-offer model produces.
+
+## SEARCHABLE VS SHAREABLE — the second handle on the reader
+
+`READER` is chosen per Brief. **Two independent things decide who actually arrives**, and
+mixing them up is how a plan drifts peer-ward without anyone noticing.
+
+| | Targets | Tends to reach |
+|---|---|---|
+| **SEARCHABLE** | **existing** demand — *"how much does a website cost"* · *"X vs Y"* · *"can I build an app without a developer"* | someone already looking → **BUYER** |
+| **SHAREABLE** | **created** demand — a novel insight, a counterintuitive argument, original data | someone not looking → **PEER** |
+
+> **A run of pure shareable content is a run of peer content wearing a more flattering name.**
+
+That is the trap, and it is not obvious from the inside. Shareable *feels* like the ambitious
+choice — it is the content that travels, that gets quoted, that looks like momentum. **It is
+also the content that reliably fails to reach anyone who would hire you.**
+
+**The two handles, and they are separate:**
+
+| Handle | Question | Lives in |
+|---|---|---|
+| **Demand type** | is this answering a question someone is already asking? | here |
+| **Hook end** | does the opening land on the craft or on the cost? | `niche.md` |
+
+A searchable topic opened at the craft end still reaches peers. **Both handles have to point
+the same way**, and `brief-builder` should check both before setting `READER`.
+
+**The practical read:** if a stretch of Briefs contains no searchable pieces at all, the buyer
+half of the funnel is not being served — regardless of what the `READER` field says.
+
+*Source: `brain/reference/frameworks/marketing-psychology.md`.*
 
 ---
 
@@ -203,8 +245,8 @@ something false; that is a separate check, and it lives on the Brief as `STANDIN
 
 # WHERE THE RULES COME FROM
 
-`sources/_log.md` lists every source and what it gave. The operating rules live here and in
-`brain/psychology.md`. `sources/raw/` is archive, never loaded as context.
+`brain/reference/sources-log.md` lists every source and what it gave. The operating rules live here and in
+`brain/psychology.md`. `brain/reference/transcripts/` is archive, never loaded as context.
 
 **Five rules are ours, invented here:** the kill rule · confidence downgrade · `ledger.md`
 as a maintained file · the buyer-vs-peer check, now resolved into two offers · text first,

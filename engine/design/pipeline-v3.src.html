@@ -1,0 +1,355 @@
+<style>
+  :root{
+    --ground:#FFFFFF; --surface:#F7F8FA; --edge:#E3E6EB;
+    --text:#16191D; --text2:#474C55; --muted:#767C87;
+    --accent:#0B6BCB; --ready:#187A4B; --blocked:#C22A2F; --pending:#8A5A00;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--ground);font-family:'Poppins',sans-serif;color:var(--text);
+       -webkit-font-smoothing:antialiased}
+  .page{width:1680px;padding:56px 60px 48px}
+
+  /* ---------- header ---------- */
+  .head{display:flex;justify-content:space-between;align-items:flex-end;
+        border-bottom:2px solid var(--text);padding-bottom:18px;margin-bottom:34px}
+  h1{font-size:38px;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+  h1 .v{color:var(--accent)}
+  .sub{font-size:14px;color:var(--muted);margin-top:8px;font-weight:400;letter-spacing:.01em}
+  .stamp{text-align:right;font-size:12px;color:var(--muted);line-height:1.8}
+  .stamp b{color:var(--text2);font-weight:600}
+
+  /* ---------- shared ---------- */
+  .lbl{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+       color:var(--muted)}
+  .card{background:var(--surface);border:1px solid var(--edge);border-radius:10px}
+
+  /* ---------- brain ---------- */
+  .brain{padding:20px 24px;margin-bottom:10px;border-top:3px solid var(--accent)}
+  .brain-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .brain-title{font-size:17px;font-weight:600}
+  .brain-note{font-size:12px;color:var(--muted)}
+  .files{display:flex;gap:8px;flex-wrap:wrap}
+  .f{font-family:'DejaVu Sans Mono',monospace;font-size:12px;padding:6px 12px;
+     background:var(--ground);border:1px solid var(--edge);border-radius:6px;color:var(--text2)}
+  .f.empty{border-color:var(--blocked);color:var(--blocked);font-weight:700}
+
+  .dropline{text-align:center;font-size:11px;color:var(--muted);letter-spacing:.1em;
+            margin:0 0 16px;text-transform:uppercase;font-weight:600}
+
+  /* ---------- two columns ---------- */
+  .cols{display:grid;grid-template-columns:1fr 92px 1fr;gap:0;align-items:start}
+  .pipe{padding:22px 24px 24px}
+  .pipe.a{border-top:3px solid var(--ready)}
+  .pipe.b{border-top:3px solid var(--pending)}
+  .p-head{display:flex;align-items:baseline;gap:12px;margin-bottom:4px}
+  .p-name{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .p-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  .p-tag.a{color:var(--ready)} .p-tag.b{color:var(--pending)}
+  .p-desc{font-size:12.5px;color:var(--text2);margin-bottom:18px;line-height:1.5}
+
+  /* ---------- steps ---------- */
+  .step{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;
+        padding-bottom:13px}
+  .step:last-child{padding-bottom:0}
+  .step::before{content:'';position:absolute;left:16px;top:28px;bottom:-1px;width:2px;
+                background:var(--edge)}
+  .step:last-child::before{display:none}
+  .num{width:34px;height:26px;border-radius:6px;display:flex;align-items:center;
+       justify-content:center;font-size:11.5px;font-weight:700;font-family:'DejaVu Sans Mono',monospace;
+       background:var(--ground);border:1.5px solid var(--edge);color:var(--muted);z-index:1}
+  .num.done{background:var(--ready);border-color:var(--ready);color:#fff}
+  .num.now{background:var(--accent);border-color:var(--accent);color:#fff}
+  .num.skip{color:var(--muted);text-decoration:line-through}
+  .body{padding-top:2px}
+  .row1{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:3px}
+  .nm{font-size:14px;font-weight:600;letter-spacing:-.005em}
+  .nm code{font-family:'DejaVu Sans Mono',monospace;font-size:13px;font-weight:700}
+  .badge{font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+         padding:2.5px 7px;border-radius:4px;white-space:nowrap}
+  .cw{background:#EAF1FA;color:var(--accent);border:1px solid #C5DBF2}
+  .cc{background:#FBEAEB;color:var(--blocked);border:1px solid #F1C8CA}
+  .sh{background:#FDF2DC;color:var(--pending);border:1px solid #EFDCB3}
+  .st{font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+      padding:2.5px 7px;border-radius:4px;background:var(--ground);border:1px solid var(--edge);
+      color:var(--muted)}
+  .st.ok{color:var(--ready);border-color:#BFE0CD;background:#EDF7F1}
+  .st.next{color:#fff;background:var(--accent);border-color:var(--accent)}
+  .what{font-size:12px;color:var(--text2);line-height:1.55}
+  .out{font-family:'DejaVu Sans Mono',monospace;font-size:11px;color:var(--muted);
+       margin-top:4px;display:block}
+  .out b{color:var(--text2);font-weight:700}
+
+  /* ---------- bridge ---------- */
+  .bridge{align-self:center;text-align:center;padding-top:150px}
+  .bfile{font-family:'DejaVu Sans Mono',monospace;font-size:12px;font-weight:700;
+         color:var(--blocked);border:1.5px solid var(--blocked);border-radius:7px;
+         padding:9px 6px;background:#FDF0F0;line-height:1.3}
+  .barrow{font-size:20px;color:var(--muted);letter-spacing:-2px;margin:8px 0}
+  .btxt{font-size:10px;color:var(--muted);line-height:1.5;margin-top:6px}
+  .btxt b{color:var(--text2)}
+
+  /* ---------- footer strips ---------- */
+  .strips{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px;margin-top:26px}
+  .strip{padding:16px 18px}
+  .strip h3{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+            color:var(--muted);margin-bottom:11px}
+  .li{font-size:11.5px;color:var(--text2);line-height:1.6;padding-left:14px;position:relative;
+      margin-bottom:6px}
+  .li:last-child{margin-bottom:0}
+  .li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;
+              border-radius:50%;background:var(--muted)}
+  .li b{color:var(--text);font-weight:600}
+  .li code{font-family:'DejaVu Sans Mono',monospace;font-size:11px}
+  .li.red::before{background:var(--blocked)} .li.red b{color:var(--blocked)}
+  .keyrow{display:flex;align-items:flex-start;gap:9px;margin-bottom:9px;font-size:11.5px;
+          color:var(--text2);line-height:1.55}
+  .keyrow .badge{flex:0 0 auto;margin-top:1px}
+  .keyrow span.kt{flex:1 1 auto;min-width:0}
+  .keyrow:last-child{margin-bottom:0}
+
+  .foot{margin-top:22px;padding-top:14px;border-top:1px solid var(--edge);
+        display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+  .foot code{font-family:'DejaVu Sans Mono',monospace}
+</style>
+
+<div class="page">
+
+  <div class="head">
+    <div>
+      <h1>THE ENGINE — PIPELINE MAP <span class="v">v3</span></h1>
+      <div class="sub">Two pipelines. One shared file. Rendered from <code>engine/design/blueprint.md</code> v3 and <code>engine/design/status.md</code>.</div>
+    </div>
+    <div class="stamp">
+      <b>Day 25</b> · 30 August 2026<br>
+      Watchlist <b>22 creators</b> · derived, not picked<br>
+      Posts published to date: <b>0</b>
+    </div>
+  </div>
+
+  <!-- BRAIN -->
+  <div class="card brain">
+    <div class="brain-top">
+      <div class="brain-title">THE DECIDED LAYER &nbsp;·&nbsp; <span style="font-family:'DejaVu Sans Mono',monospace;font-size:15px;color:var(--accent)">brain/</span></div>
+      <div class="brain-note">Filled ONLY by interview — never by inference. Read by every skill in both pipelines.</div>
+    </div>
+    <div class="files">
+      <span class="f">niche.md</span>
+      <span class="f">voice.md</span>
+      <span class="f">strategy.md</span>
+      <span class="f">psychology.md</span>
+      <span class="f">ledger.md</span>
+      <span class="f empty">swipe.md — EMPTY</span>
+      <span class="f">reference/tooling.md</span>
+    </div>
+  </div>
+  <div class="dropline">↓ &nbsp; read by every step below &nbsp; ↓</div>
+
+  <!-- PIPELINES -->
+  <div class="cols">
+
+    <!-- A -->
+    <div class="card pipe a">
+      <div class="p-head">
+        <div class="p-name">PIPELINE A</div>
+        <div class="p-tag a">LEARN · runs monthly</div>
+      </div>
+      <div class="p-desc">Learns <b>how</b> things are said, never <b>what</b> is said. Cheapest round first — expensive work only ever touches creators that survived cheap work.</div>
+
+      <div class="step">
+        <div class="num done">A1</div>
+        <div class="body">
+          <div class="row1"><span class="nm">CAPTURE — the roster</span><span class="badge sh">SHUBHAM</span><span class="st ok">done · day 23</span></div>
+          <div class="what">Creators entered in the Verdict Board artifact and exported.</div>
+          <span class="out">→ <b>creator-roster.md</b> · 32 creators</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num done">A2</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>qualify</code> PASS 1 — five gates</span><span class="badge cw">COWORK</span><span class="st ok">done · day 24</span></div>
+          <div class="what">Sort by shape-reference / inspiration-only / neither. Tag reader and position. No tools, costs nothing.</div>
+          <span class="out">→ <b>qualified.md</b> · 17 KEEP · 10 RESERVE · 5 CUT</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num done">A3</div>
+        <div class="body">
+          <div class="row1"><span class="nm">REVIEW — the verdict board</span><span class="badge sh">SHUBHAM</span><span class="st ok">done · day 24</span></div>
+          <div class="what">All 32 reviewed by hand. 11 rows overturned against the gates, knowingly.</div>
+          <span class="out">→ <b>decisions.md</b> · 22 KEEP · 10 CUT</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num done">A4</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>qualify</code> PASS 2 — the watchlist</span><span class="badge cw">COWORK</span><span class="st ok">done · day 24</span></div>
+          <div class="what">Overturns applied verbatim, verified zero drift. Adds 5 scrape batches and a teardown order.</div>
+          <span class="out">→ <b>handles.md</b> · 22 handles</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num now">A5</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>scout</code> — fetch &amp; rank</span><span class="badge cc">CLAUDE CODE ONLY</span><span class="st next">▶ next</span></div>
+          <div class="what">Per creator: list 12 recent pieces with likes + comments · compute <b>that creator's own median</b> · flag outliers at <b>≥ 2× median</b>, max 3 · tag peer / buyer. Hands over <b>every</b> piece fetched, flagged WINNER or NORMAL — the cap of 3 caps transcription, not the handoff.</div>
+          <span class="out">→ <b>&lt;handle&gt;/raw/metrics.csv</b> + <b>pieces.md</b></span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">A6</div>
+        <div class="body">
+          <div class="row1"><span class="nm">PASTE URLS — by hand</span><span class="badge sh">SHUBHAM</span><span class="st">manual by design</span></div>
+          <div class="what">OpenCLI returns no post URLs — all 23 subcommands checked. <code>pieces.md</code> gives the post index and caption; match and paste. ~3 per creator, winners only.</div>
+          <span class="out">→ URL lines filled in <b>pieces.md</b></span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">A7</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>scout</code> STEP 6 — transcribe</span><span class="badge cc">CLAUDE CODE ONLY</span><span class="st">untested</span></div>
+          <div class="what"><code>opencli instagram download</code> then Whisper. Both never run on a real reel. Run ONE, confirm real text, then the rest.</div>
+          <span class="out">→ <b>&lt;index&gt;-transcript.md</b></span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">A8</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>creator-analyst</code> — teardown</span><span class="badge cw">COWORK</span><span class="st">never run</span></div>
+          <div class="what">Never goes online. Timestamp-maps each piece, names the mechanic against <code>psychology.md</code>, records awareness level, RETENTION, REWARD, reader, and the downgrade to your standing. Compares hits to <b>their own misses</b>.</div>
+          <span class="out">→ <b>&lt;handle&gt;/teardown.md</b> · one creator per run</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">A9</div>
+        <div class="body">
+          <div class="row1"><span class="nm">PROMOTE</span><span class="badge cw">COWORK</span><span class="st">rule exists</span></div>
+          <div class="what">A shape enters the swipe file only if it appears in <b>5 or more of 10</b> pieces <b>and</b> survives the standing downgrade. Everything else is written to DID NOT TRANSFER, with the reason.</div>
+          <span class="out">→ entries in <b>brain/swipe.md</b></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRIDGE -->
+    <div class="bridge">
+      <div class="bfile">brain/<br>swipe.md</div>
+      <div class="barrow">▸▸▸</div>
+      <div class="btxt"><b>The only shared file.</b><br>No shared skill.<br>No shared trigger.<br><br>Do not re-merge<br>the pipelines.</div>
+    </div>
+
+    <!-- B -->
+    <div class="card pipe b">
+      <div class="p-head">
+        <div class="p-name">PIPELINE B</div>
+        <div class="p-tag b">WRITE · runs per post</div>
+      </div>
+      <div class="p-desc">Fully built. <b>Has never been run once.</b> Every step below is a skill that exists on disk and has produced nothing.</div>
+
+      <div class="step">
+        <div class="num">B1</div>
+        <div class="body">
+          <div class="row1"><span class="nm">IDEA IN — six inputs</span><span class="badge sh">SHUBHAM</span><span class="st">input 6 missing</span></div>
+          <div class="what">One sentence said out loud. <code>thought-partner</code> — input 6 — is not built.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">B2</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>topic-scout</code></span><span class="badge cw">COWORK</span><span class="st">never run</span></div>
+          <div class="what">Candidate topics out of the idea.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">B3</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>brief-builder</code> — the contract</span><span class="badge cw">COWORK</span><span class="st">never run</span></div>
+          <div class="what">Assigns RING · READER · STAGE · SLOT · TRUST LEG · VILLAIN · OFFER. Enforces the <b>3-2-2 mix</b> across seven pieces. <code>mixed</code> and <code>unknown</code> are illegal reader values.</div>
+          <span class="out">→ <b>work/briefs/</b> · 16-field Brief</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">B4</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>script-writer</code> / <code>linkedin-writer</code></span><span class="badge cw">COWORK</span><span class="st">never run</span></div>
+          <div class="what">Reads <code>voice.md</code> for register, <code>psychology.md</code> for the mechanic, <code>swipe.md</code> for a shape — <b>which is why A must run first.</b></div>
+          <span class="out">→ <b>work/drafts/</b></span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">B5</div>
+        <div class="body">
+          <div class="row1"><span class="nm"><code>script-doctor</code> — THE GATE</span><span class="badge cw">COWORK</span><span class="st">never run</span></div>
+          <div class="what">Seven checks. The step the whole system exists to protect. <b>A kill verdict is a successful run</b> — never produce a post to be helpful.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">B6</div>
+        <div class="body">
+          <div class="row1"><span class="nm">SHUBHAM REWRITES</span><span class="badge sh">SHUBHAM</span><span class="st">never happened</span></div>
+          <div class="what">The only thing that fills <code>voice.md</code> OBSERVED. Until this runs, voice is a plan, not data.</div>
+          <span class="out">→ <b>work/log/corrections.md</b> + voice OBSERVED</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">B7</div>
+        <div class="body">
+          <div class="row1"><span class="nm">PUBLISH</span><span class="badge sh">SHUBHAM</span><span class="st">day 25 · never</span></div>
+          <div class="what">Volume over polish — the first fifty posts are reps to build articulation, not a portfolio.</div>
+          <span class="out">→ <b>work/log/published.md</b></span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="num">B8</div>
+        <div class="body">
+          <div class="row1"><span class="nm">HOOKS BANKED</span><span class="badge cw">COWORK</span><span class="st">never happened</span></div>
+          <div class="what">Every hook written is kept, whether it shipped or not.</div>
+          <span class="out">→ <b>work/log/hook-bank.md</b></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRIPS -->
+  <div class="strips">
+    <div class="card strip">
+      <h3>Three limits that shape every step</h3>
+      <div class="li"><b>No view counts.</b> Instagram exposes none through any free route. <code>engagement = likes + comments</code> — a <b>proxy</b>, and it is never called reach, in any file or any post.</div>
+      <div class="li"><b>Twelve posts per run.</b> <code>--limit</code> does not raise it. The accumulating <code>metrics.csv</code> is the fix, not a flag.</div>
+      <div class="li"><b>No post URLs</b> from any read command. All 23 checked. Step A6 is manual by design — it is not a bug to be engineered away.</div>
+    </div>
+
+    <div class="card strip">
+      <h3>Where each step runs</h3>
+      <div class="keyrow"><span class="badge cw">COWORK</span><span class="kt">Reads and writes every file. <b style="color:var(--blocked)">Reaches no tool at all.</b></span></div>
+      <div class="keyrow"><span class="badge cc">CLAUDE CODE ONLY</span><span class="kt">The only surface that can run <code>opencli</code>, Whisper, yt-dlp, or the bridge on <code>127.0.0.1:19825</code>.</span></div>
+      <div class="keyrow"><span class="badge sh">SHUBHAM</span><span class="kt">By hand. Never automated away.</span></div>
+      <div class="li" style="margin-top:11px">Skills are discovered only at <code>.claude/skills/&lt;name&gt;/SKILL.md</code>. This project keeps them in <code>engine/skills/</code> — if <code>/scout</code> is not a command, that is why.</div>
+    </div>
+
+    <div class="card strip">
+      <h3>Open risks · day 25</h3>
+      <div class="li red"><b>Four untested tools</b> — <code>instagram download</code>, Whisper on a real reel, Exa, and any multi-creator batch. Rate limiting past 12 sequential reads is unknown; the watchlist is 22. Hence batch 0.</div>
+      <div class="li"><b>The FORMAT gap.</b> The Brief has no FORMAT field — nothing decides whether a piece is an idea, advice, a story, a build or a breakage.</div>
+      <div class="li"><b>No <code>outreach</code> skill.</b> <code>strategy.md</code> calls it the most valuable missing piece.</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div>Two laws that stop it rotting: <b style="color:var(--text2)">research never judges, analysis never fetches</b> &nbsp;·&nbsp; <b style="color:var(--text2)">every decision lives in exactly one file</b></div>
+    <div>Ground truth for tools: <code>brain/reference/tooling.md</code> — it wins over this map</div>
+  </div>
+</div>

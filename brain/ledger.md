@@ -465,8 +465,8 @@ too.
 
 **Stage:** built, unproven.
 
-**Proof:** the folder — `brain/`, `skills/`, `work/`, `sources/`. 24 files, 7 skills, every
-rule traced to a named source in `sources/_log.md`. `SHOWABLE`
+**Proof:** the folder — `brain/`, `engine/skills/`, `work/`. 24 files, 7 skills, every
+rule traced to a named source in `brain/reference/sources-log.md`. `SHOWABLE`
 
 ---
 
