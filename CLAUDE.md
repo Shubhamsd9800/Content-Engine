@@ -1,6 +1,6 @@
 # CLAUDE.md — how to work in this folder
 
-Read `README.md` first, this second, `ARCHITECTURE.md` third.
+Read `README.md` first, this second, `engine/design/blueprint.md` third.
 
 ---
 
@@ -8,10 +8,18 @@ Read `README.md` first, this second, `ARCHITECTURE.md` third.
 
 1. Read those three files.
 2. Read the `brain/` files the task needs.
-3. **Never load `sources/raw/`** unless explicitly distilling a source. Those files are
+3. **If the task touches Instagram, YouTube, transcripts or search — read
+   `brain/reference/tooling.md` first.** It is the ground truth for what is installed, the
+   exact commands, and the three things the tools cannot do. Guessing here wastes a session.
+   **Start with its first section, WHERE EVERY TOOL RUNS.** The tools are Windows binaries
+   plus a browser bridge on `127.0.0.1:19825`; **only Claude Code, running on the Windows
+   host, can execute them.** A Cowork session reads and writes every file here but reaches no
+   tool at all — verified by test, Day 24. Check which surface you are on before planning a
+   step that fetches anything.
+4. **Never load `brain/reference/transcripts/`** unless explicitly distilling a source. Those files are
    6,000–12,000 words of filler around 400 words of framework. Loading them makes output
    vaguer, not sharper.
-4. Do the work.
+5. Do the work.
 
 ## This folder is not
 
@@ -98,7 +106,7 @@ rule. **Writing to both inside one piece is what makes content generic.**
 
 **The mix — 3-2-2 per seven pieces.** Three ring 1, two rings 2–3, two ring 4, **never ring
 5.** Ring contents in `brain/niche.md`. `brief-builder` assigns the ring after reading the
-last six entries of `work/published.md`; `script-doctor` writes ring and reader back on
+last six entries of `work/log/published.md`; `script-doctor` writes ring and reader back on
 publish. Without both steps the mix silently does not happen.
 
 **Hook framing.** Frame broad, land narrow. Open on **pain or desire** — some permutation of
@@ -142,8 +150,29 @@ A post may share anything at any stage. It may never skip a stage upward. "I fou
 and here is why it looks useful" is publishable at stage *found*. "Use this" requires
 *shipped*.
 
-**Tools.** Free tiers only — Chrome extension in Brave, web search, YouTube Data API free
-tier, Apify free tier. No paid APIs.
+**Tools.** Free and open source only. **₹0 per run, and it stays that way.** Apify was
+assessed on Day 23 and rejected — it works and it would be cheap, but OpenCLI does the job for
+nothing. Do not re-open it.
+
+**How Instagram is actually read — settled Day 23, proven on live data.**
+
+> **OpenCLI** bridges into a **burner Instagram** logged into its **own Chrome install** —
+> never the brand account, never its browser profile. `agent-reach` installs and health-checks
+> it; the reading is done by calling `opencli` directly.
+
+Three limits that shape every step downstream, and none of them are negotiable:
+
+1. **There are no view counts.** Instagram exposes none through any free route.
+   `engagement = likes + comments`. **It is a proxy and must be called one** — never described
+   as reach in any file or any post.
+2. **Twelve posts per run.** `--limit` does not raise it. The accumulating `metrics.csv` is the
+   fix, not a flag.
+3. **No post URLs from any read command.** All 23 were checked. The URL is copied by hand —
+   about two per creator. **This is the only manual step in Pipeline A**, and it is not a bug
+   to be engineered away.
+
+**Everything else — the exact commands, what each returns, what is still untested — lives in
+`brain/reference/tooling.md`. That file wins over this one on anything tools-related.**
 
 **Social proof as a hook device** is not available until a real number exists.
 
@@ -207,7 +236,7 @@ Ask before assuming either governs a new artifact.*
 
 There is no `memory.md`. A settled decision is written as a rule, once, in the file that
 governs it — this file for cross-cutting decisions, the relevant `brain/` file otherwise.
-Corrections to drafts go in `work/corrections.md`.
+Corrections to drafts go in `work/log/corrections.md`.
 
 When a decision changes, **rewrite the rule.** Never append the new one beside the old.
 

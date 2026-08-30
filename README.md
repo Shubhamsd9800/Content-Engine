@@ -18,9 +18,14 @@ AI is how the work gets done, never the identity. Tools change; the position sho
 **Two audiences, two offers — this is the load-bearing decision:**
 
 ```
-PEERS   students, engineers, working professionals  →  buy the PRODUCT   (deferred, post 20)
-BUYERS  small business owners, solo founders         →  buy the SERVICE   (web, SaaS, MVP)
-        with no technical person
+PEER   someone trying to BUILD something and stuck   →  buys the PRODUCT  (deferred, post 20)
+       defined by STATE, not job title. wants the craft.
+
+BUYER  someone with a BUSINESS PROBLEM, wants it gone →  buys the SERVICE  (web, SaaS, MVP)
+       wants the outcome. corporate and small-business, never consumer.
+
+       Often the SAME PERSON at two different moments.
+       Which one a piece reaches is decided by the OPENING, not the topic.
 ```
 
 The peers are not a leak. They are the second revenue line.
@@ -55,37 +60,43 @@ work.**
 Content-Engine/
 ├── README.md          you are here
 ├── CLAUDE.md          how to work here + the rules. read second.
-├── ARCHITECTURE.md    the workflow, end to end. read third.
 │
-├── brain/             what every skill reads
-│   ├── niche.md         who this is for, and the ring mix       LOCKED · WORKING
-│   ├── psychology.md    why people stop, stay and trust         ACTIVE
-│   ├── strategy.md      positioning, the funnel, the levers     ACTIVE
-│   ├── ledger.md        every real thing built, broken, fixed   12 ENTRIES
-│   ├── voice.md         how Shubham sounds                      v0
-│   └── swipe.md         structures taken from creators          EMPTY
+├── brain/             WHAT IT BELIEVES — slow, interview only
+│   ├── niche.md         who this is for, the rings, the hook-end rule   WORKING
+│   ├── psychology.md    why people stop, stay and trust                 ACTIVE
+│   ├── strategy.md      positioning, the funnel, searchable vs shareable ACTIVE
+│   ├── ledger.md        every real thing built, broken, fixed           12 ENTRIES
+│   ├── voice.md         how Shubham sounds — OBSERVED still empty       v0
+│   ├── swipe.md         structures taken from creators                  EMPTY
+│   └── reference/     what the brain was built FROM
+│       ├── tooling.md       what is installed and what it cannot do
+│       ├── frameworks/      distilled operating rules — feed the brain
+│       ├── transcripts/     raw sources. NEVER loaded as context.
+│       └── sources-log.md   every source and what it gave
 │
-├── skills/
-│   ├── topic-scout/       RESEARCH · daily sweep — trending + resources
-│   ├── creator-analyst/   ANALYZE  · tear down one creator
-│   ├── brief-builder/     ANALYZE  · the Brief + verdict
-│   ├── linkedin-writer/   WRITE    · LinkedIn posts and carousels
-│   ├── script-writer/     WRITE    · Instagram reels
-│   ├── script-doctor/     ANALYZE  · checks your rewrite
-│   └── niche-finder/      SETUP    · has run. niche.md is written.
+├── engine/            HOW IT RUNS
+│   ├── skills/          all 10
+│   │   ├── qualify/         ANALYZE  · roster → watchlist, five gates
+│   │   ├── scout/           RESEARCH · fetch metrics, find the outliers
+│   │   ├── creator-analyst/ ANALYZE  · tear down one creator
+│   │   ├── topic-scout/     RESEARCH · daily sweep — trending + resources
+│   │   ├── thought-partner/ THINK    · a thought → a named concept
+│   │   ├── brief-builder/   ANALYZE  · the Brief + verdict
+│   │   ├── linkedin-writer/ WRITE    · LinkedIn posts and carousels
+│   │   ├── script-writer/   WRITE    · Instagram reels
+│   │   ├── script-doctor/   ANALYZE  · checks your rewrite
+│   │   └── niche-finder/    SETUP    · has run. niche.md is written.
+│   └── design/
+│       ├── blueprint.md     THE system document. read third.
+│       ├── status.md        live state — what is built, what is next
+│       └── diagrams/        the workflow as a picture and a PDF
 │
-├── work/              in progress and shipped
-│   ├── _TEMPLATE-brief.md
-│   ├── briefs/ · drafts/
-│   └── published.md · hook-bank.md · corrections.md
-│
-├── docs/              the workflow as a picture and a PDF
-│
-└── sources/           material studied, never published
-    ├── _log.md          every source and every creator, one table
-    ├── frameworks/      distilled operating rules
-    ├── creators/        <slug>/raw/ + teardown.md
-    └── raw/             transcripts. archived, never loaded as context.
+└── work/              WHAT IT PRODUCES
+    ├── creators/        roster · handles · qualified · <slug>/raw/ + teardown.md
+    ├── ideas/           queue.md (topic-scout) · concepts/ (thought-partner)
+    ├── briefs/ · drafts/
+    ├── _TEMPLATE-brief.md
+    └── log/             published.md · hook-bank.md · corrections.md
 ```
 
 ---
@@ -100,14 +111,15 @@ Content-Engine/
 | Ledger | **12 entries**, all built-for-self, zero clients. |
 | Blocking a first post | **nothing.** |
 | Still needs input | `brain/swipe.md` — creator material Claude cannot fetch itself. |
-| No backup | **Content-Engine has no git repo.** PowerShell, never Cowork. |
+| Backup | `github.com/Shubhamsd9800/Content-Engine` — private. **Never run git from Cowork**; it leaves an undeletable `.lock`. |
 
 ## Order of work
 
 1. ~~`brain/ledger.md`~~ — **done.** 12 entries, by interview, in his words.
 2. ~~`brain/niche.md`~~ — **done.** Eight phases, locked 2026-08-25.
-3. **`brain/swipe.md`** — 5–10 creators, 10 pieces each, prioritising anomalies at 2× their
-   normal engagement. Then `creator-analyst`. **The watchlist must cover both readers.**
+3. **`brain/swipe.md`** — 10–12 creators via `qualify`, then `scout` finds the anomalies at
+   2× that creator's own median, then `creator-analyst` tears one down.
+   **The watchlist must cover both readers AND both markets — Indian and international.**
 4. **First post.** Nothing blocks it.
 5. `brain/voice.md` — grows from every draft Shubham rewrites. Cannot be filled in advance.
 6. **At post 20** — four deferred decisions come due: the product offer to peers, the
@@ -118,7 +130,7 @@ Content-Engine/
 
 **3-2-2 per seven pieces.** Three ring 1, two rings 2–3, two ring 4, never ring 5. Full ring
 contents in `brain/niche.md`; enforced by `brief-builder`, recorded by `script-doctor` into
-`work/published.md`.
+`work/log/published.md`.
 
 Console: https://claude.ai/code/artifact/6393933c-c9cb-47c5-b865-b5f5e2612938
-Workflow map and PDF: `docs/`
+Workflow map and PDF: `engine/design/diagrams/`

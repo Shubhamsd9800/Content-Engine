@@ -90,7 +90,7 @@ Same source. One is somebody else's story. One is the reader's, told through it.
 
 **Nothing below is written by Claude.** `voice.md` earns its content from diffs — what
 Shubham changed between the draft and what he published. `script-doctor` records them,
-`work/corrections.md` classifies them, and **two of the same class is a bug in the skill,
+`work/log/corrections.md` classifies them, and **two of the same class is a bug in the skill,
 not a note for this file.**
 
 ## OBSERVED — from real rewrites
