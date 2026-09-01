@@ -181,9 +181,15 @@ reader conclude "he has done this for a paying client," rewrite the framing or k
 5. Reposting someone else's story with no angle.
 
 **Item 5 has a positive form, and it is the sharpest rule in the engine:** the angle does
-not have to be his — **it has to be the reader's problem.** Not *"Sharan failed and it's
-inspiring."* Instead: *"Sharan spent two years failing. You are eighteen months in. Here is
-the part of his road you are standing on right now."*
+not have to be his — **it has to be the reader's problem.**
+
+**CORRECTED Day 26.** *"The stage you are standing on"* is ONE angle, not the rule. Any of these
+passes: a decision the reader also faces · a belief the story corrects · a mechanism they can
+reuse · a real named cost · a stage they recognise. What FAILS is *"X struggled and it's
+inspiring"* — for having **no takeaway at all**, not for missing one device.
+
+**And the hook is not the angle. Open on the story; land on the reader.** Opening on the reader
+is a lecture. Full version in **`brain/playbook.md` §1 → S07** — full beat map and THE ANGLE RULE.
 
 A NOT-list hit is a **kill**, not a discussion.
 
@@ -195,6 +201,40 @@ serves none.
 **Villain.** The practice, default or inherited assumption this is against. Never a person.
 
 **Funnel slot.** TOFU · MOFU · BOFU. Every Brief declares one before a writer touches it.
+
+## PLATFORM — exactly one, added Day 26
+
+**Both Instagram and LinkedIn are live surfaces as of 31 Aug 2026** (`niche.md`, OPEN list,
+resolved). **Not every piece goes to both.** Every Brief declares one `PLATFORM` and it routes
+to a different writer:
+
+| PLATFORM | writer | the piece has |
+|---|---|---|
+| `instagram` | `script-writer` | a visual proof, a demo, a build, a person-carried story |
+| `linkedin` | `linkedin-writer` | an argument, a position, a post-mortem, reasoning with no visual |
+
+**The test, and it is the only one that matters:** *is there something to LOOK AT?*
+If the value survives being read with the sound off and no screen — **LinkedIn.**
+If the value IS the thing on screen — **Instagram.**
+
+**Never `both`.** If a piece genuinely fits both, it is **two Briefs and two drafts**, Instagram
+first. A LinkedIn post is not a reel script with the video removed — a reel wins on three
+channels (spoken, on-screen text, visual) and LinkedIn has **one**. Pasting one into the other
+throws away either the visual or the argument.
+
+> **NOTE FOR `linkedin-writer`:** the eight reel structures all assume a visual channel and
+> **are not directly usable on LinkedIn.** S02, S07 and S08 survive the collapse to text —
+> arguments and stories, not demonstrations. **S01, S03, S05 and S06 depend on something being
+> visible.**
+>
+> ✅ **RESOLVED DAY 27 — the LinkedIn section now exists: `brain/playbook.md` §5.**
+> The earlier note said it *"needs its own teardowns of LinkedIn material; it does not exist
+> yet."* **It did not need building.** Three creators had already made the collapse to a single
+> channel, and between them they cover it: **`nick_saraev`** gives the structure (his captions
+> are 200-word articles that paste in unchanged), **`vaibhavsisinty` / `theautomationguy.ai` /
+> `thevibefounder`** give the rhythm (one idea per line, blank line between — the pacing lives
+> in the line breaks, not the edit), **`_roshnichellani`** gives the argument, and
+> **`socialmasla` #9** is a ready-made open letter that is already a LinkedIn post.
 
 ---
 

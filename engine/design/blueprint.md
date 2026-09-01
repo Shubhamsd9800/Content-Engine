@@ -144,7 +144,16 @@ controls for audience size, algorithm and topic at once, which is exactly what m
 comparing two different creators meaningless and comparing a creator to themselves
 meaningful.
 
-**c.** Flag outliers at **2× that creator's median engagement or more**, at most 3.
+**c.** Take that creator's **top 3 pieces by engagement**. Record each piece's `ratio`
+(engagement ÷ median) and the creator's **GAP** (highest ÷ median). Selection is by **rank**;
+the ratio is recorded, never used as a gate.
+
+> **Superseded Day 25 — the 2× bar.** It was picking pieces *and* judging creators at the same
+> time, and as a picking rule it cannot promise three: `nick_saraev`'s first live run gave one
+> post over 2×, and an 8% move in his median would have given none, from the same twelve posts.
+> The teardown needs three pieces; a threshold cannot guarantee three. The creator-level
+> judgement moved to **GAP**, which is recorded here and acted on in the cut, never inside a
+> fetch step.
 
 > **Superseded Day 24.** This round originally split *reach outliers* from *resonance
 > outliers* — the second needed a like-to-view ratio. **There are no view counts**, so the
@@ -348,7 +357,7 @@ the other, and swapping the whole toolbox out later touches no skill.
 |---|---|---|---|---|
 | **Instagram posts + likes + comments** | **OpenCLI** | **burner only** | ✅ **proven live** | `scout`, `qualify` |
 | A creator's videos and transcripts | yt-dlp | No | ✅ installed | `scout` (YouTube cross-posters) |
-| Reel → text | Whisper + ffmpeg | No | ✅ installed, **untested on a reel** | `scout` |
+| Reel → text | Whisper + ffmpeg **— or pasted by hand** | No | ✅ installed, **still untested on a reel · NO LONGER GATING** | `scout` STEP 6 |
 | Any web page as clean text | Jina Reader | No | ✅ | `topic-scout`, outreach |
 | Semantic search across the web | Exa via mcporter | No | ⚠️ configured, **never queried** | `topic-scout` |
 | Feeds you follow | feedparser | No | ✅ | `topic-scout` |
@@ -574,9 +583,11 @@ in `engine/design/status.md`; this is the summary.
 for each. Produces `qualified.md` — a verdict and a named killing gate per creator. Shubham
 overturns rows. **Only then does `handles.md` get rebuilt.**
 
-**2 · Run `scout`, then fetch the winners.** ~2 URLs per creator by hand, then download and
-transcribe. **This is where the four untested things get tested** — see the last section of
-`tooling.md`.
+**2 · Run `scout`, then collect the winners.** Per winner, by hand: the **URL**, the **full
+caption** (OpenCLI cuts at 100 chars) and the **transcript**. The transcript may come from
+`opencli download` + Whisper **or straight from Shubham** — `creator-analyst` reads the file
+`raw/<index>-transcript.md` and has no way to know which produced it. **Decided Day 25 s2:
+the tool route is a convenience, never a gate.** See `tooling.md` → WHAT IS STILL UNTESTED.
 
 **3 · One teardown, one creator.** Then promote, and `swipe.md` stops being empty.
 

@@ -263,8 +263,27 @@ only at the hook layer — frame broadly, open on pain or desire.
 
 ## OPEN
 
-- **Platform.** Koe: one platform first, then leverage it into the second. This file
-  assumes LinkedIn and Instagram together. **Not settled.**
+- ~~**Platform.**~~ **DECIDED Day 26, 31 Aug 2026. BOTH SURFACES ARE LIVE, ROUTED PER PIECE.**
+  Instagram (reels) and LinkedIn (text) are both posting surfaces. **Not everything goes to
+  both** — each Brief declares one `PLATFORM`, chosen by what the piece is, not by habit.
+  Koe's one-platform-first rule is knowingly overridden: `linkedin-writer` and `script-writer`
+  already exist as separate skills, so the second surface costs a routing decision rather than
+  a second engine. **The cost accepted: attention split across two surfaces at zero followers.**
+  Revisit at 20 published pieces with real numbers.
+
+  **Routing, as a starting rule — revise from data, not from feel:**
+
+  | The piece is | Platform |
+  |---|---|
+  | a build, a demo, a resource, anything with a **visual proof** | **Instagram** |
+  | a story with a person in it (S07) | **Instagram** |
+  | an argument, a position, a decision, a post-mortem (S08) | **LinkedIn** |
+  | a lesson with **no visual** — the value is entirely in the reasoning | **LinkedIn** |
+  | buyer-facing, corporate, hiring-adjacent | **LinkedIn** |
+  | both genuinely fit | **Instagram first**, LinkedIn as a separate rewrite — never a paste |
+
+  **A reel is not a LinkedIn post with video.** Cross-posting the same words to both is the
+  failure mode, and it is why `PLATFORM` is a Brief field rather than a distribution step.
 - **Cadence.** Realistic weekly hours alongside a full-time job. Not decided.
 - **Whether the mixed audience holds.** Twenty posts of buyer/peer ratios on real
   Briefs will answer it. Nothing before then will.

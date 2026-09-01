@@ -220,12 +220,27 @@ single-word paragraphs used as drama · opening with credentials instead of a pr
 
 ## DESIGN — artifacts and UI
 
-**Poppins** for all text. **Instrument Serif Italic** for pull-quotes only.
-**Light mode only**, no toggle.
+**Poppins** for all text. **Instrument Serif Italic** for emphasis — **used often, not saved
+for one pull-quote.** It carries lead-ins, key phrases, field hints, section titles and asides.
+If a page has one italic line in it, that is too few.
+**DARK MODE. Committed, no toggle** — revised Day 25 s2; this said light-only until then.
+Every colour painted explicitly from tokens, never left to the host's theme.
+**Body line-height 1.6. Poppins 300 for body, 500 for headings.** Never set body text below
+15px, and never shrink a field someone has to type into.
 
-*Open, unresolved: this says Poppins, and the brand system at `_plugins/brand-os/` says
-Clash Display / Geist Sans / Geist Mono. Both are Shubham's. Neither has been retired.
-Ask before assuming either governs a new artifact.*
+**DECIDED Day 25, session 2 — this is now the ONLY type system in the project.**
+Clash Display / Geist Sans / Geist Mono at `_plugins/brand-os/` are **RETIRED on type.**
+This covers everything: artifacts, diagrams, working docs, brand assets, thumbnails, post
+graphics. There is no second font system and nothing to ask about. `brand-os` still governs
+**colour** — read `brand.json`, never hardcode a hex — but its typography block is superseded
+by this one. If `brand-os` is ever regenerated, its type must be regenerated to match here.
+**DARK PALETTE — the live one.**
+`#0D1317` ground · `#141D23` surface · `#19242B` raised · `#26343D` edge · `#1E2A32` edge-soft ·
+`#E9EFF3` text · `#AEBCC6` text-2 · `#7A8994` muted · `#57A9F8` accent · `#122A3E` accent-soft ·
+`#2C5378` accent-line · `#4FC490` ready · `#FF848A` blocked · `#EAB855` pending ·
+`#B6A6F0` violet (the mixed-column tag).
+
+*Superseded light palette, kept only so an older artifact can be read:*
 `#FFFFFF` ground · `#F7F8FA` surface · `#E3E6EB` edge · `#16191D` text ·
 `#474C55` text-2 · `#767C87` muted · `#0B6BCB` accent ·
 `#187A4B` ready · `#C22A2F` blocked · `#8A5A00` pending.

@@ -6,8 +6,16 @@ description: WRITE. Turns a Brief into a LinkedIn post or carousel — 3 variant
 # linkedin-writer
 
 **Read:** the Brief · `brain/niche.md` · `brain/voice.md` · `brain/psychology.md` ·
-`brain/swipe.md`. **You never see the raw input.** If the Brief is thin, send it back to
-`brief-builder`. Do not improvise around it.
+**`brain/playbook.md`** — and inside it, **§5 LINKEDIN before you write a word**, then §2 SCRIPT
+GRID, §3 HOOKS, §4 CAPTION, §7 RULES, §8 DO NOT.
+**You never see the raw input.** If the Brief is thin, send it back to `brief-builder`.
+Do not improvise around it.
+
+> **§5 exists because you need it.** All eight `swipe.md` shapes were torn from reels with
+> three channels; **LinkedIn has one.** S02, S07 and S08 survive the collapse — S01, S03, S05
+> and S06 do not. §5 carries the three creators who already made that collapse: the
+> **structure** (`nick_saraev` — hook, itemised breakdown, one synthesis line), the **rhythm**
+> (one idea per line, blank line between) and the **argument** (`_roshnichellani`).
 
 **Write:** `work/drafts/<brief-id>-linkedin.md`
 **Language: English. Always.**

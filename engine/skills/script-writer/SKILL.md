@@ -6,7 +6,9 @@ description: WRITE. Turns a Brief into an Instagram reel script — three aligne
 # script-writer — Instagram reels
 
 **Read:** the Brief · `brain/niche.md` · `brain/psychology.md` · `brain/voice.md` ·
-`brain/swipe.md`. **You never see the raw input.**
+**`brain/playbook.md`** — §1 SHAPES, then **§2 SCRIPT GRID for how the words are actually
+arranged**, then §3 HOOKS, §4 CAPTION, §6 PRODUCTION, §7 RULES, §8 DO NOT.
+**You never see the raw input.**
 
 **Write:** `work/drafts/<brief-id>-reel.md`
 
@@ -214,6 +216,9 @@ PRODUCTION
    structure from.
 9. Never claim what the ledger cannot back.
 10. One idea per reel.
-11. Every borrowed structure names its entry in `brain/swipe.md`.
+11. **Every borrowed structure names its entry in `brain/playbook.md`** — the shape (S01-S10),
+    the script devices used from §2, and any production device from §6.
+    **And it names the CONFIDENCE TIER: [C] confirmed · [S] single source · [X] craft only.**
+    A draft leaning on an [X] device as its spine is sent back.
 12. Banned openings and words: `brain/voice.md`.
 13. Log all 9 hooks in `work/log/hook-bank.md`.

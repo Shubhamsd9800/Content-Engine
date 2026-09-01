@@ -76,7 +76,10 @@ Creators whose **methods** we study. Never creators whose **topics** we copy.
    **8–10 pieces from ONE creator.** Ten from one beats two from five — the finding is the
    *repeated* pattern, and repetition is invisible in two.
 4. Run `creator-analyst` → `creators/<slug>/teardown.md`
-5. Structures at **5+ of 10 and transferable** get promoted into `brain/swipe.md`.
+5. Promotion into **`brain/playbook.md`** — **two bars since Day 27:** caption-level patterns
+   at **5+ of 10 and transferable**; script and production patterns at **3 of 3 winners in one
+   account AND confirmed in a second** (the control set is captions only, so a body-level
+   pattern can never reach 5 of 10).
 
 **Four creators is enough to start.** More produces overlap, not insight.
 
