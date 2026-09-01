@@ -10,25 +10,75 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 6 NORMAL
 likes 5957  comments 6604  engagement 12561
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           5 Weeks AI Engineer Roadmap  Learn Python, Most important pillar to build multi agent systems - Week
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Db3XnbFpQCu/
 FULL CAPTION:
-          ____________________________________________
+          5 Weeks AI Engineer Roadmap
+          
+          Learn Python, Most important pillar to build multi agent systems - Week 1
+          
+          Agent Development Kit, Finish the free ADK Crash Course by Google - Week 2 and Week 3 half
+          
+          Learn MCP and API Integration using Anthropic Academy Free Courses - Week 3
+          
+          Master building RAG pipeline using CampusX YouTube Channel - Week 4
+          
+          Most Importantly, Learn Evals and Observability by LangChain's LangSmith Tracing Playlist - Week 5
+          
+          All the best, Follow for more!
 
 ### #11  ·  8/5/2026  ·  7090  ·  7.35x
 likes 3722  comments 3368  engagement 7090
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Opportunity for College Students and Graduates SAVE!  Standford Universiry is hosting FREE Career Wo
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DbqPtvhpcVe/
 FULL CAPTION:
-          ____________________________________________
+          Opportunity for College Students and Graduates SAVE!
+          
+          Standford Universiry is hosting FREE Career Workshops in major cities in India.
+          
+          Program- GMAC Tours
+          
+          Details -
+          Career Guidance in AI, Engineering Management
+          Business Masters and MBA Guidance
+          Meet Admissions 1 on 1
+          Post-study career insights Abroad
+          Learn application timelines & funding options
+          Build your global career roadmap
+          
+          Benefits -
+          - Stanford GSB Admissions Team
+          - Application fee waivers
+          - Millions in scholarships
+          - 1-on-1 sessions with decision makers
+          
+          Delhi ,Mumbai, Bangalore, Hyderabad
+          Limited seats - register NOW
+          Starts on 17th till 29th Aug'26
 
 ### #12  ·  8/4/2026  ·  6491  ·  6.73x
 likes 2472  comments 4019  engagement 6491
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           15 AI Projects That Will get you Hired in 2026  In the doc I have covered 15 AI Prpjects and a compl
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DbnxPfrJVm3/
 FULL CAPTION:
-          ____________________________________________
+          15 AI Projects That Will get you Hired in 2026
+          
+          In the doc I have covered 15 AI Prpjects and a complete guide how to build them, tech stack to use and step by step tutorial. Some of it are as follows
+          
+          Fine Tuning - Fine-tune an open-source model to outperform prompting on a specific business workflow.
+          
+          Guardrails - Build a safety layer that prevents unsafe prompts, outputs, and tool actions.
+          
+          RAG - An AI assistant that finds answers from internal company knowledge with citations.
+          
+          Agents - Build an autonomous agent that reads, plans, and executes real-world tasks using tools.
+          
+          Evals - Build a testing framework that measures AI quality before every production release.
+          
+          LLMOps - Build the infrastructure to monitor, evaluate, deploy, and improve AI systems at scale.
+          
+          Follow for more, All the best!!
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

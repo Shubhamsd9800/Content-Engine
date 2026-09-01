@@ -2,6 +2,18 @@
 
 Built 30 Aug 2026 from the 22 `raw/metrics.csv` files. Sorted by each creator's single biggest post.
 
+> **WHAT THIS FILE IS, AND IS NOT — added Day 25 s2, when two other places started saying
+> similar things.** This file is the **numbers reference**: every creator, every winner, the
+> median, the multiplier, the grid position, pinned posts held out. That job is still its own.
+>
+> It does **not** decide priority. **`handles.md` → `TEARDOWN ORDER` owns the order** — three
+> tiers, ranked on GAP, cluster, scale match and column coverage. Where this file's raw sort by
+> biggest-post disagrees with that ranking, **`handles.md` wins**: sorting by top multiplier
+> alone puts a 312× news lottery at number one.
+>
+> The blank `verdict:` / `keep / cut:` lines below are **superseded**. They were written for a
+> review pass that the numbers made unnecessary. Leave them blank; do not fill them in.
+
 **How to use this.** Open the profile. Posts are numbered by position in the grid — left to right, top row first. `post 4` is the 4th tile. Match the caption to be sure, then watch it. No links or tools needed.
 
 **📌 = pinned post.** Instagram pins sit at the top of the grid whatever their age, so they are listed separately and left out of the maths. Several are a creator's best work — look at them anyway.

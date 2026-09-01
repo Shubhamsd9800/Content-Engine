@@ -87,7 +87,13 @@ engagement = likes + comments
 median     = middle value of that creator's engagement column
              (even count: mean of the two middle values)
 ratio      = engagement ÷ median          (per post — recorded, never a gate)
-GAP        = highest engagement ÷ median  (per creator — the Phase 2 signal)
+GAP        = highest engagement ÷ median  (per creator — recorded, NEVER ranked on)
+
+  ── ADDED DAY 27 · compute BOTH, always ──────────────────────────────────
+likes_median = middle value of that creator's LIKES column (unpinned only)
+likes_ratio  = likes ÷ likes_median       (per post)
+GAP_likes    = highest likes ÷ likes_median   (per creator)
+SPLIT flag   = raise when GAP and GAP_likes disagree by more than ~2x
 ```
 
 ### STEP 3a · FIND THE PINNED POSTS — before any arithmetic
@@ -138,8 +144,22 @@ number, not a gate.**
 **GAP is the creator-level question**, asked once per creator, not per post: *is there any
 distance between this creator's best post and their typical post?* If there is not, the
 teardown's core question — *why did this one work when the others didn't?* — has no "didn't"
-to point at, and the hours spent will find nothing. GAP is recorded for Phase 2 to rank on.
-**`scout` never acts on it.**
+to point at, and the hours spent will find nothing.
+
+> **⚠️ REVISED DAY 27 — GAP IS NO LONGER A RANKING NUMBER.** It used to be recorded *"for Phase 2
+> to rank on"*. It is now recorded for **comprehension only**. `handles.md`'s TEARDOWN ORDER —
+> its single consumer — is retired; the queue is complete. **Nothing ranks on GAP. `scout`
+> never acted on it and still does not.**
+>
+> **AND IT IS NOT COMPARABLE BETWEEN CREATORS.** `engagement = likes + comments`, so a creator
+> who gates only their winners has a GAP inflated far above one who gates their whole feed.
+> Measured Day 27: `shashwat___agarwal` **11.86x → 3.48x** on likes alone, while
+> `kushal_vijay_` **13.02x → 14.12x** — the correction moves accounts in **opposite
+> directions**. A single GAP figure cannot be read across two accounts and never could.
+>
+> **THEREFORE: compute and record BOTH.** `GAP` and `GAP_likes`, side by side, every run.
+> Where they disagree by more than ~2x, write **`SPLIT — engagement <a>x vs likes <b>x`** in
+> RUN NOTES. **That is a fact about the creator's comment behaviour, not about any one post.**
 
 **Why the creator's own median:** it cancels follower count, algorithm and topic in one move.
 Comparing two creators measures audience size. Comparing a creator to themselves measures the
@@ -156,7 +176,9 @@ arithmetic instead of taste.
 | **Selection** | the **top 3 by engagement** in that creator's CSV | fewer than 3 posts total → take what exists and say so |
 | **Ties** | equal engagement at the boundary | take the **older** post — it has had longer to settle |
 | **The control set** | **every fetched post is handed on**, flagged `WINNER` or `NORMAL` | never hand winners alone — see below |
-| **GAP** | record `highest ÷ median` per creator, to 2 decimals | never a gate here. Recorded for Phase 2. |
+| **GAP** | record `highest ÷ median` per creator, to 2 decimals | never a gate. **Recorded for comprehension — nothing ranks on it.** |
+| **GAP_likes** | record `highest likes ÷ likes median` per creator, to 2 decimals | **ADDED DAY 27.** Always computed alongside GAP. |
+| **SPLIT flag** | GAP and GAP_likes disagree by more than ~2x | write `SPLIT — engagement <a>x vs likes <b>x` in RUN NOTES. A creator-level fact, never a post-level one. |
 | **FLAT flag** | `GAP < 1.5` | still hand over the top 3, but write **`FLAT — low variance`** in RUN NOTES. Phase 2 decides whether to skip. `scout` does not skip. |
 
 **Never reorder the top 3 by taste, topic, or how good a caption looks.** Rank by engagement
@@ -219,6 +241,7 @@ holds the history, this file holds the current call.
 Run: <yyyy-mm-dd>   Posts in CSV: <n>   Pinned: <n>   Scored: <n unpinned>
 Median engagement: <n over unpinned only>   Date span: <n> days
 GAP: <best unpinned ÷ median, 2dp>   <FLAT — low variance, if GAP < 1.5>
+GAP (likes only): <best likes ÷ likes median, 2dp>   <SPLIT — …, if they differ by >2x>
 Handed to creator-analyst: <n> pieces — <w> WINNER, <c> NORMAL
 
 ## WINNERS — top 3 by engagement   ← these get transcribed
@@ -283,7 +306,25 @@ Then say plainly:
 engine may call a downloader. Before Day 24 no skill owned it and transcripts appeared in
 `raw/` by magic; that gap is closed here.
 
-**Runs only in Claude Code on the Windows host** — see `tooling.md` → WHERE EVERY TOOL RUNS.
+### TWO ROUTES. BOTH COMPLETE THIS STEP.
+
+**The output of STEP 6 is a FILE, not a tool run.** What has to exist when this step is done is
+`work/creators/<slug>/raw/<index>-transcript.md`, headed with its numbers. How the words got
+into it is not this step's business.
+
+| Route | Surface | State |
+|---|---|---|
+| **A · By hand** — Shubham watches the reel and pastes the words | **anywhere, Cowork included** | ✅ **the default route.** Needs no tool, no bridge, no Windows host. |
+| **B · By tool** — `opencli instagram download` then `whisper` | Claude Code on the Windows host only | ⚠️ **both commands still UNTESTED.** A convenience, never a prerequisite. |
+
+**Route A is not a fallback and is not lesser.** Decided Day 25, session 2: the two commands in
+route B had been sitting on the critical path since Day 23 purely because nobody had noticed
+that `creator-analyst` reads a file and cannot tell who wrote it. **Never block a teardown
+waiting on route B, never ask which route produced a transcript, and never mark a
+hand-supplied transcript as provisional.**
+
+**Route B runs only in Claude Code on the Windows host** — see `tooling.md` → WHERE EVERY TOOL
+RUNS. Route A runs anywhere.
 
 For each `WINNER` row that now carries a URL:
 
@@ -332,5 +373,7 @@ the first fails, stop and say so rather than working through the list.
     "hits vs misses". Selecting 3 caps transcription, not the handoff.
 12. **Never let a pinned post into the median or the top 3**, and never mark more than three.
     A pinned post is the creator's own answer; selecting it discovers nothing.
-13. **Never act on GAP.** Record it and move on. Skipping a creator is Phase 2's decision,
-    made across all 22 at once — never one creator at a time inside a fetch step.
+13. **Never act on GAP, and never rank on it.** Record **both** figures — `GAP` and
+    `GAP_likes` — and move on. **Revised Day 27:** GAP's only consumer was `handles.md`'s
+    TEARDOWN ORDER, which is now retired. It is a number for reading a creator, not for
+    ordering them, and it is **not comparable between accounts.**

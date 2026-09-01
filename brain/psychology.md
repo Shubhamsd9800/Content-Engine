@@ -1,7 +1,7 @@
 # psychology.md — why people stop, stay and trust
 
-**Every writer reads this.** `swipe.md` says *what shape to use*. This says *why the
-shape works* — which is the only way a writer adapts to a situation it has not seen.
+**Every writer reads this.** `playbook.md` says *what shape to use and how the words go inside
+it*. This says *why the shape works* — which is the only way a writer adapts to a situation it has not seen.
 
 ---
 

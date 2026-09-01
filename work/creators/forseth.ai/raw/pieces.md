@@ -10,25 +10,31 @@ Handed to creator-analyst: 10 pieces — 3 WINNER, 7 NORMAL
 likes 6334  comments 13293  engagement 19627
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           comment "Kallaway" and i'll send the breakdown over 👇  Day 1 of recreating editing styles with Clau
-URL:      ____________________________________________
+URL:      https://www.instagram.com/reel/DbJ0mp1sbGL/
 FULL CAPTION:
-          ____________________________________________
+          comment "Kallaway" and i’ll send the breakdown over 👇
+          
+          Day 1 of recreating editing styles with Claude Code to show how easy it is to edit HIGH QUALITY edits with my claude code workflow
 
 ### #7  ·  7/13/2026  ·  7839  ·  13.85x
 likes 2521  comments 5318  engagement 7839
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           comment "edit" and i'll send the breakdown over👇  Day 4 of letting claude code edit every video I p
-URL:      ____________________________________________
+URL:      https://www.instagram.com/reel/Datg7C0M9Gp/
 FULL CAPTION:
-          ____________________________________________
+          comment "edit" and i’ll send the breakdown over👇
+          
+          Day 4 of letting claude code edit every video I post
 
 ### #5  ·  7/28/2026  ·  4292  ·  7.58x
 likes 1755  comments 2537  engagement 4292
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           comment "DAY 5" and i'll send the breakdown on how this works.  this entire video was edited by clau
-URL:      ____________________________________________
+URL:      https://www.instagram.com/reel/DbT4_N_u-zG/
 FULL CAPTION:
-          ____________________________________________
+          comment "DAY 5" and i’ll send the breakdown on how this works.
+          
+          this entire video was edited by claude code. i didnt even touch it ONCE. And it is getting better every signøe time I post
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

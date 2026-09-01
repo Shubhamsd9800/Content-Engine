@@ -10,25 +10,25 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 6 NORMAL
 likes 5501  comments 4982  engagement 10483
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           How to use your free ChatGPT plan to do agent coding
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcQuX1yNzXu/
 FULL CAPTION:
-          ____________________________________________
+          How to use your free ChatGPT plan to do agent coding
 
 ### #8  ·  8/21/2026  ·  8289  ·  13.59x
 likes 3679  comments 4610  engagement 8289
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           How to get 1 billion tokens for free
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcTZ7DoNkrb/
 FULL CAPTION:
-          ____________________________________________
+          How to get 1 billion tokens for free
 
 ### #10  ·  8/19/2026  ·  4150  ·  6.80x
 likes 2156  comments 1994  engagement 4150
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Beat AI Skills
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcOamo8t6d9/
 FULL CAPTION:
-          ____________________________________________
+          Beat AI Skills
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

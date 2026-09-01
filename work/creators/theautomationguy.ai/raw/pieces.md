@@ -10,25 +10,64 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 7 NORMAL
 likes 22247  comments 8176  engagement 30423
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Remember the God's Eye from Fast & Furious?  The one that could track basically anyone, anywhere?  S
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Dcd5TqisECl/
 FULL CAPTION:
-          ____________________________________________
+          Remember the God’s Eye from Fast & Furious?
+          
+          The one that could track basically anyone, anywhere?
+          
+          Someone actually built it. 💀
+          
+          God’s Eye View gives you a live 3D view of the planet where you can track aircraft, ships, satellites, earthquakes, cameras and more.
+          
+          Then you turn on FLIR / Night Vision…
+          
+          click a plane…
+          
+          LOCK TARGET.
+          
+          …and enter its cockpit.
+          
+          It looks like classified Hollywood tech — except this one is open-source and sitting on GitHub.
+          
+          Would you actually use this? 👀
+          
+          Save it before you forget.
+          
+          SEO:
+          God’s Eye View | Fast & Furious God’s Eye | God’s Eye tracker | OSINT | open source OSINT tools | GitHub projects | satellite tracker | aircraft tracker | ship tracker | live tracking | FLIR | night vision | 3D globe | spy technology | futuristic technology | tech tools
+          
+          #ai #claude #fyp #tech #viral
 
 ### #6  ·  8/19/2026  ·  29047  ·  13.19x
 likes 15128  comments 13919  engagement 29047
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           A developer built an open-source Claude watermark fix tool that helps clean hidden metadata and rewr
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcEIzKjo5r1/
 FULL CAPTION:
-          ____________________________________________
+          A developer built an open-source Claude watermark fix tool that helps clean hidden metadata and rewrite text to reduce AI watermark patterns.
+          
+          So if you use Claude AI for emails, assignments, scripts, or content, you’ll want to see this.
+          
+          Comment “TOOL” and I’ll send the link.
+          
+          #Anthropic #Claude #ClaudeAI #fyp
 
 ### #5  ·  8/24/2026  ·  7838  ·  3.56x   🌱 maturing
 likes 3357  comments 4481  engagement 7838
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           ChatGPT can turn ONE product image into billboards, ads, packaging concepts, premium product shoots,
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcWKJjPMUVY/
 FULL CAPTION:
-          ____________________________________________
+          ChatGPT can turn ONE product image into billboards, ads, packaging concepts, premium product shoots, social creatives, cinematic scenes and so much more.
+          
+          The trick is knowing exactly what to ask for.
+          
+          I’ve put together 200+ reusable creative codes/prompts you can copy, paste and adapt for your own brand.
+          
+          Save this Reel + comment “CHATGPT” and I’ll send you the full list. 🚀
+          
+          #chatgpt #ai #design #fyp #claude
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

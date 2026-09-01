@@ -10,25 +10,28 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 9 NORMAL
 likes 4622  comments 12133  engagement 16755
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Comment "Profile" and follow us first. We'll DM you the website link + our LinkedIn frameworks for f
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Dbiv1LmNfUA/
 FULL CAPTION:
-          ____________________________________________
+          Comment "Profile" and follow us first. We'll DM you the website link + our LinkedIn frameworks for free.
+          (linkedin, linkedin profile, profile optimization, personal branding, linkedin tips, founders, ghostwriting, content creation, linkedin growth, linkedin strategy, networking, freelancing, creators, career, linkedin personal branding, linkedin creators, building in public)
 
 ### #2  ·  8/21/2026  ·  13667  ·  4.02x
 likes 2960  comments 10707  engagement 13667
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Comment "Agent" we'll dm you the complete prompt + setup process and website link for free.  (ai age
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcT-S3btmFj/
 FULL CAPTION:
-          ____________________________________________
+          Comment "Agent" we'll dm you the complete prompt + setup process and website link for free.
+          (ai agent, ai tools, ai workflow, ai content agent, chatgpt, claude, gemini, ai prompts, content creation, content automation, ai automation, instagram growth, linkedin growth, social media growth, content strategy, ai productivity, creator tools, ai workflow automation, ai for creators, ai for business, ai for freelancers, ai for entrepreneurs, ai for founders, ai business tools, ai hacks, ai tips, ai tutorial, ai trends, future of ai, build ai agent, ai agent workflow, ai agent tutorial, ai automation tools, content workflow, content system, content strategy tools)
 
 ### #1  ·  8/24/2026  ·  12247  ·  3.60x   🌱 maturing
 likes 3378  comments 8869  engagement 12247
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Comment "Secret" and we'll dm you the complete prompt for free.  (chatgpt, chatgpt prompt, chatgpt t
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Dcbr-58NiAi/
 FULL CAPTION:
-          ____________________________________________
+          Comment "Secret" and we'll dm you the complete prompt for free.
+          (chatgpt, chatgpt prompt, chatgpt tricks, ai tools, ai prompts, viral reel ideas, reel ideas, instagram growth, content creation, content strategy, viral content, content marketing, social media growth, creator tools, content creator, instagram tips, instagram strategy, viral hooks, viral angles, niche research, content research, audience research, ai content creation, ai for creators, content ideas, reel strategy, instagram reels, reels growth, creator growth, personal branding)
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

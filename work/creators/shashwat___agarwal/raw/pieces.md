@@ -10,25 +10,29 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 6 NORMAL
 likes 3154  comments 12731  engagement 15885
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Turn Claude code into a website agency that scrapes leads of local businesses, analyses them, ranks
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Db79CSBTp64/
 FULL CAPTION:
-          ____________________________________________
+          Turn Claude code into a website agency that scrapes leads of local businesses, analyses them, ranks them, gives your a prompt to make a website for them and also gives you outreach message for it all in one go.
 
 ### #12  ·  8/11/2026  ·  3050  ·  2.28x
 likes 2859  comments 191  engagement 3050
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Follow me for more such content! @shashwat___agarwal   A free open source alternative to Eleven Labs
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Db5rdgTzlbR/
 FULL CAPTION:
-          ____________________________________________
+          Follow me for more such content! @shashwat___agarwal
+          
+          A free open source alternative to Eleven Labs that can generate voice with just text. No need to train voice models. You can directly design it (accent, age, tone etc)
+          
+          This is extremely valuable since you can do so much with this tool.
 
 ### #6  ·  8/24/2026  ·  3028  ·  2.26x   🌱 maturing
 likes 975  comments 2053  engagement 3028
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Unlimited Lead Generation and Webscrapping with this free github repo. Comment for the link
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Dca0buPTihg/
 FULL CAPTION:
-          ____________________________________________
+          Unlimited Lead Generation and Webscrapping with this free github repo. Comment for the link
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

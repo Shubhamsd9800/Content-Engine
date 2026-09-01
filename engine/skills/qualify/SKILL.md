@@ -10,7 +10,8 @@ follower counts — never a reel, never a caption, never engagement.
 
 **Read — the whole brain cycle, not a subset:**
 `work/creators/creator-roster.md` · `brain/niche.md` · `brain/strategy.md` ·
-`brain/psychology.md` · `brain/swipe.md`
+`brain/psychology.md` · **`brain/playbook.md`** *(read §1 SHAPES and §8 DO NOT — what the
+engine already has, and what it has already rejected.)*
 
 > **`strategy.md` was missing from this list and it holds two things the gates depend on:**
 > the PEER/BUYER definitions by state, and the searchable-vs-shareable axis. Gate 2 cannot be

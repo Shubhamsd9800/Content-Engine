@@ -10,25 +10,28 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 6 NORMAL
 likes 11551  comments 697  engagement 12248
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           🚨 Stop Wasting ₹1 Lakh on AI Agency Courses!  #aiagency #artificialintelligence #automation #entrep
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcJOE8ZzXLv/
 FULL CAPTION:
-          ____________________________________________
+          🚨 Stop Wasting ₹1 Lakh on AI Agency Courses!
 
 ### #8  ·  8/18/2026  ·  11956  ·  4.15x
 likes 11498  comments 458  engagement 11956
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           🚨 Stop Wasting ₹15,000 on Meta Ads Courses!  #fbads #metaads #digitalmarketing #advertising
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcJNjcSTBLP/
 FULL CAPTION:
-          ____________________________________________
+          Stop Wasting ₹15,000 on Meta Ads Courses!
 
 ### #9  ·  8/14/2026  ·  9584  ·  3.33x
 likes 9063  comments 521  engagement 9584
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           🙏🏻 @meta please!!!  #fbads #metaads #digitalmarketing #performancemarketing
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/Db_O9LwSglY/
 FULL CAPTION:
-          ____________________________________________
+          @meta please!!!
+          #fbads #metaads #digitalmarketing #performancemarketing
+          
+          Dear Meta, advertisers don't need 50 new AI features every month. We need an Ads Manager that doesn't lag, overwhelm us with a cluttered UI, or take forever to launch a simple campaign. Sometimes, better product design means making the basics faster, not adding more features.
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

@@ -110,16 +110,16 @@ Content-Engine/
 | Niche | **written.** `brain/niche.md`, status WORKING, revise after 20 posts. |
 | Ledger | **12 entries**, all built-for-self, zero clients. |
 | Blocking a first post | **nothing.** |
-| Still needs input | `brain/swipe.md` — creator material Claude cannot fetch itself. |
+| Still needs input | **an idea for the first post.** Pipeline A is complete — 15 creators, `brain/playbook.md` built Day 27. |
 | Backup | `github.com/Shubhamsd9800/Content-Engine` — private. **Never run git from Cowork**; it leaves an undeletable `.lock`. |
 
 ## Order of work
 
 1. ~~`brain/ledger.md`~~ — **done.** 12 entries, by interview, in his words.
 2. ~~`brain/niche.md`~~ — **done.** Eight phases, locked 2026-08-25.
-3. **`brain/swipe.md`** — 10–12 creators via `qualify`, then `scout` finds the anomalies at
-   2× that creator's own median, then `creator-analyst` tears one down.
-   **The watchlist must cover both readers AND both markets — Indian and international.**
+3. ~~**`brain/swipe.md`**~~ — **DONE Day 27.** 15 creators through `qualify` → `scout` →
+   `creator-analyst`, producing a `teardown.md` **and** a `script.md` each.
+   **Absorbed into `brain/playbook.md` — the single writing file. 1,141 lines.**
 4. **First post.** Nothing blocks it.
 5. `brain/voice.md` — grows from every draft Shubham rewrites. Cannot be filled in advance.
 6. **At post 20** — four deferred decisions come due: the product offer to peers, the

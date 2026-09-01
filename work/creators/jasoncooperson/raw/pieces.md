@@ -10,25 +10,58 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 9 NORMAL
 likes 17863  comments 37543  engagement 55406
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Comment "COUNCIL" and I'll send you the skill for free 👇  Stanford just proved Claude agrees with y
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DZGTgwDlcrF/
 FULL CAPTION:
-          ____________________________________________
+          Comment "COUNCIL" and I'll send you the skill for free 👇
+          
+          Stanford just proved Claude agrees with you 49% more than a human would. Translation: your AI is the world's greatest yes-man — hyping up your dumbest ideas instead of telling you the truth.
+          
+          The fix comes from Andrej Karpathy (founding member at OpenAI, just left to join Anthropic). He built something called the LLM Council. I ripped his GitHub repo, patched it into a clean little skill, and now it runs with one command.
+          
+          Type /llm-council and it spawns 5 advisor agents:
+          – a contrarian who only hunts for what'll fail
+          – a first-principles thinker who rips apart your assumptions
+          – an expansionist who finds the upside you're missing
+          – an outsider who knows nothing about your industry
+          – an executor who only cares what you do Monday morning
+          
+          Then they blind-review each other's answers without knowing who wrote what, and a chairman agent makes the final call + next steps.
+          
+          No more echo chamber. Real pushback on tap.
+          
+          Comment "COUNCIL" and it's yours, free 👇
 
 ### #8  ·  6/7/2026  ·  14836  ·  8.37x
 likes 4094  comments 10742  engagement 14836
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           just hacked the algo broh. comment "SKILL" to tap in.  i built a Claude system that tells me exactly
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DZQZOVhgNvK/
 FULL CAPTION:
-          ____________________________________________
+          just hacked the algo broh. comment "SKILL" to tap in.
+          
+          i built a Claude system that tells me exactly what to post to go viral. ran it on my own last post → 200K+ views. ran it for my clients → stacked em with viral vids.
+          
+          here's the play: it pulls the top performing posts in your niche (reels AND carousels), fully transcribed with visual breakdowns — likes, hooks, comment counts, outlier scores, all of it.
+          
+          Apify scrapes the last week per account → a python script ranks + grabs the top 3 per creator → Claude fans out subagents to break down every video → then it writes you a clean HTML report.
+          
+          the full files, code + setup guide live inside my Skool.
+          
+          but if you want the FREE breakdown on how it works + how to build it yourself — comment "SKILL" and I'll send it your way.
 
 ### #12  ·  5/28/2026  ·  10153  ·  5.72x
 likes 3374  comments 6779  engagement 10153
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           Comment AUTOPOSTER and I'll send you the files.  I built a Claude + Zernio workflow that can take a
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DY5C5T9k33O/
 FULL CAPTION:
-          ____________________________________________
+          Comment AUTOPOSTER and I'll send you the files.
+          
+          I built a Claude + Zernio workflow that can take a video from my Downloads folder, transcribe it, generate a caption, and post it across my socials.
+          
+          No manual uploads. No copy/paste posting. Just tell Claude what video to publish.
+          
+          Comment AUTOPOSTER and I'll send you the files.
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 

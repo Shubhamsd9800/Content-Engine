@@ -61,16 +61,21 @@ directory, which is not the layout here.
 
 **The fix is a directory junction per skill** — supported, and it keeps one source of truth:
 `.claude/skills/<name>` points at `engine/skills/<name>`. The file exists once; two paths reach
-it. Run once, in **cmd.exe** (not PowerShell), from the project root. Junctions need no admin
-rights:
+it. Run once, in **cmd.exe** (not PowerShell). Junctions need no admin rights.
+
+> **CORRECTED Day 25.** This section used to say the junctions live in a `.claude\skills` folder
+> **at the project root**. That is not what was done and not what works here. They were created
+> in the **global** skills folder, `%USERPROFILE%\.claude\skills`, on Day 25 session 1, verified
+> `LinkType=Junction`. A project-root `.claude\skills` is only read when Claude Code is started
+> from that exact directory; the global folder is read wherever it starts. **Use the global path.**
 
 ```
-mkdir .claude\skills
-for %S in (brief-builder creator-analyst linkedin-writer niche-finder qualify scout script-doctor script-writer thought-partner topic-scout) do mklink /J ".claude\skills\%S" "D:\Claude-cowork\Content-Engine\engine\skills\%S"
+mkdir "%USERPROFILE%\.claude\skills"
+for %S in (brief-builder creator-analyst linkedin-writer niche-finder qualify scout script-doctor script-writer thought-partner topic-scout) do mklink /J "%USERPROFILE%\.claude\skills\%S" "D:\Claude-cowork\Content-Engine\engine\skills\%S"
 ```
 
-Verify with `dir .claude\skills` — ten entries, each marked `<JUNCTION>`. After this,
-`/qualify` and `/scout` work as slash commands in Claude Code.
+Verify with `dir "%USERPROFILE%\.claude\skills"` — ten entries, each marked `<JUNCTION>`.
+After this, `/qualify` and `/scout` work as slash commands in Claude Code.
 
 > `.claude/skills/` holds junctions, never copies. **A copied SKILL.md is a second source of
 > truth and will drift.** If a skill is renamed or added, redo its junction.
@@ -387,8 +392,14 @@ say the run is done and analysis continues in Cowork against the real files.
 1. `opencli instagram download <url>` — never run.
 2. **Whisper against a real Instagram reel** — never run.
 3. **Exa search** — configured, never queried.
-4. **A multi-creator batch** — only single-creator calls have been made. Rate limiting at 12+
-   sequential profile reads is unknown.
+4. ~~**A multi-creator batch**~~ — **RETIRED Day 25. Tested and passed.** All 22 handles were
+   read in one sitting: 12 posts each except `forseth.ai` (10 — the account has 10). **No rate
+   limiting, no auth drop, no empty result, and the two-in-a-row stop rule never fired.** 22
+   sequential reads is proven safe. Nothing above 22 has been tried.
 
-**These four are the risk surface of the first full `scout` run.** Test them on one creator
-before running twelve.
+**Items 1–3 remain the risk surface — but none of them is on the critical path any more.**
+
+> **A6 does not depend on 1 or 2.** `download` + Whisper are a convenience for producing
+> `raw/<index>-transcript.md`. `creator-analyst`'s input contract names that **file**, never the
+> tool that wrote it, so a transcript pasted in by hand is the identical input. Decided Day 25,
+> session 2. Test the commands when convenient; do not let them gate a teardown.

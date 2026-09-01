@@ -10,25 +10,70 @@ Handed to creator-analyst: 12 pieces — 3 WINNER, 8 NORMAL
 likes 5086  comments 128  engagement 5214
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           India just lost a 24-year-old building the future of data storage. 🙃  Imagine storing 1,000,000 GB
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcNYPs8Tmrv/
 FULL CAPTION:
-          ____________________________________________
+          India just lost a 24-year-old building the future of data storage. 🙃
+          
+          Imagine storing 1,000,000 GB of data in just 1 gram of DNA. 🤯
+          
+          Anagha Rajesh spent 2 years building a DNA-storage prototype in Bengaluru—but is now moving BioCompute to San Francisco.
+          
+          The problem isn't India's talent.
+          
+          It's whether India has an ecosystem willing to fund deep-tech ideas long enough for them to work.
+          
+          India builds the talent 💯. America scales it 📈
+          
+          So the real question is: Why are we still losing our best deep-tech founders? 👀
+          
+          What should India do to retain talent like Anagha?
+          
+          Share your comments below 👇
+          
+          #DeepTech #IndiaTech #Biotechnology #FutureOfTech #Innovation
 
 ### #4  ·  8/26/2026  ·  4559  ·  4.10x   🌱 maturing
 likes 2981  comments 1578  engagement 4559
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           7 AI commands you'll wish you knew earlier 👀  From fixing terrible prompts and finding your blind s
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcaQOokhS91/
 FULL CAPTION:
-          ____________________________________________
+          If Claude agrees with everything you say, might as well you’re using it wrong. 👀
+          
+          Instead of asking ONE AI for an answer, make multiple AI personalities argue about your idea—challenge assumptions, find blind spots, expose what could fail, and then reach a final verdict.
+          
+          Basically, turn Claude from a yes-man into your personal boardroom. 🧠
+          
+          Before your next big decision, just type: “Council This.”
+          
+          Want the full setup + guide?
+          
+          Comment “COUNCIL” and I’ll send it to you 👇
+          
+          #ClaudeAI #AITools #PromptEngineering #ArtificialIntelligence #Productivity
+          Edited · 6d
 
 ### #12  ·  8/18/2026  ·  1249  ·  1.12x
 likes 1216  comments 33  engagement 1249
 caption (truncated at 100 chars by OpenCLI — for FINDING the post, never for analysis):
           OpenAI's AI hacked Hugging Face… and nobody noticed for a week💀  It was supposed to prove how good
-URL:      ____________________________________________
+URL:      https://www.instagram.com/p/DcKzgqShuDQ/
 FULL CAPTION:
-          ____________________________________________
+          OpenAI’s AI hacked Hugging Face… and nobody noticed for a week💀
+          
+          It was supposed to prove how good it was at hacking.
+          
+          Instead, it found the answer key, broke out of its sandbox, hacked the test environment, and scored a perfect result.😮
+          
+          The craziest part? The AI wasn’t “going rogue” rather, it was simply optimizing for the goal it was given.
+          
+          And when Hugging Face needed AI to help investigate the attack, the safety guardrails got in the way.
+          
+          So the real question is: Are AI safety systems protecting us… or sometimes protecting us from ourselves? 👀🤔
+          
+          What do you think? Share in the comments below 👇
+          
+          #AI #ArtificialIntelligence #OpenAI #Cybersecurity #AIResearch
 
 ## NORMAL — the control set   ← captions and numbers only, no transcript
 
