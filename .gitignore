@@ -54,3 +54,14 @@ _to_delete/
 # Installers and logs -- never versioned.
 *.exe
 *.log
+
+# Paid-tool leftovers, Day 29. The `belt` CLI renderer behind the marketplace carousel
+# skill is PAID and was abandoned on Day 28 -- no dollar spent, and the carousel now has a
+# different route (Shubham's own prompt, run in a Claude Desktop project where fonts load).
+# NOT the whole .agents/ folder -- that is where real project-scoped skills would live and
+# they SHOULD be tracked. Only the dead install is excluded.
+.agents/skills/belt/
+skills-lock.json
+
+# Same dead belt install, found again under .claude/ on day 29. Garbage, never used.
+.claude/skills/belt/

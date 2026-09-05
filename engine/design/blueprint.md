@@ -1,3 +1,20 @@
+> # ⚠ STALE IN ONE RESPECT — flagged Day 29, not yet rewritten
+>
+> **Every mention of `swipe.md` in this document is dead.** That file was absorbed into
+> `brain/playbook.md` on Day 27 and archived. **Do not recreate it.**
+>
+> **And the shared-file diagram is a version behind.** This document draws Pipeline A and
+> Pipeline B sharing ONE writing file. Since Day 28 there are **TWO**, and they are never
+> both read:
+>
+> ```
+> PLATFORM = instagram  →  brain/playbook.md
+> PLATFORM = linkedin   →  brain/linkedin-playbook.md
+> ```
+>
+> The design reasoning in this document is otherwise current. **`engine/design/status.md`
+> wins on what is true today.** Rewrite scheduled, not done.
+
 # THE ENGINE BLUEPRINT — v3
 
 **Content Engine — the only design document.**

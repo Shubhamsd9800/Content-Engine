@@ -222,19 +222,62 @@ first. A LinkedIn post is not a reel script with the video removed — a reel wi
 channels (spoken, on-screen text, visual) and LinkedIn has **one**. Pasting one into the other
 throws away either the visual or the argument.
 
-> **NOTE FOR `linkedin-writer`:** the eight reel structures all assume a visual channel and
-> **are not directly usable on LinkedIn.** S02, S07 and S08 survive the collapse to text —
-> arguments and stories, not demonstrations. **S01, S03, S05 and S06 depend on something being
-> visible.**
+> **NOTE FOR `linkedin-writer` — REWRITTEN DAY 28.**
+> The previous note pointed at `brain/playbook.md` §5 and listed which reel shapes survive the
+> collapse to text. **§5 is retired and that framing is gone.** LinkedIn is no longer a
+> collapsed reel — it has its own writing file built from a LinkedIn practitioner's system:
 >
-> ✅ **RESOLVED DAY 27 — the LinkedIn section now exists: `brain/playbook.md` §5.**
-> The earlier note said it *"needs its own teardowns of LinkedIn material; it does not exist
-> yet."* **It did not need building.** Three creators had already made the collapse to a single
-> channel, and between them they cover it: **`nick_saraev`** gives the structure (his captions
-> are 200-word articles that paste in unchanged), **`vaibhavsisinty` / `theautomationguy.ai` /
-> `thevibefounder`** give the rhythm (one idea per line, blank line between — the pacing lives
-> in the line breaks, not the edit), **`_roshnichellani`** gives the argument, and
-> **`socialmasla` #9** is a ready-made open letter that is already a LinkedIn post.
+> ### → **`brain/linkedin-playbook.md`**
+>
+> **Do not reason about a LinkedIn Brief using reel shapes.** They contradict each other on
+> purpose — S02 THE CORRECTED ASSUMPTION is `[C]` tier on Instagram and a **banned pattern**
+> on LinkedIn.
+
+---
+
+## BUCKET — where the idea came from · added Day 28
+
+**Every `linkedin` Brief declares one.** `linkedin-writer` Gate 1 fails without it.
+
+His system mines ideas from sales-call transcripts. **There are no clients, so that source is
+empty.** Three buckets replace it, and all three are real:
+
+| BUCKET | Source | Funnel | The test |
+|---|---|---|---|
+| `built` | `brain/ledger.md` — built-for-self entries | MOF | Did he build it, and can it be shown? |
+| `stuck` | A real stuck-point, past or present | MOF | Was he actually stuck, and did he get out? |
+| `moving` | What is happening in AI and building this week | TOF | Is there a read on it the reader does not already have? |
+
+**`moving` is not a lesser bucket.** Timely industry topics are a named top-of-funnel bucket in
+the source. But a screenshot plus a reaction is not a post — **a screenshot plus a read is.**
+Apply the brand promise: *who is stuck, and what do they leave with?* If the reader leaves with
+only the news they already saw, **kill it.**
+
+**`bofu` is switched off.** Case studies, testimonials and customer results have no material
+behind them. `BUILT, NOT DELIVERED`. A Brief that needs one is a **kill**, not a hold.
+
+**For `instagram` Briefs, BUCKET is optional.** The reel shapes carry their own selection logic.
+
+---
+
+## CTA — decided here, never by the writer · added Day 28
+
+**This resolves a contradiction that was live in two skills.** `linkedin-writer` v1 hardcoded
+*"conversation or return only"*; `script-writer` §5 said something adjacent. Neither was right,
+because **the CTA is not a writing decision.**
+
+| CTA | Means | When |
+|---|---|---|
+| `none` | The post ends when the idea ends | **The default.** Valid and common. |
+| `question` | One question they can answer from their own experience — never one testing whether they read the post | The idea genuinely opens a question |
+| `offer` | A plain statement of what he builds and who it is for | `buyer` reader, BOFU slot only. A statement, never a pitch. |
+
+**`forced CTAs` is a banned pattern.** If no CTA is earned, write `none` — do not manufacture
+one to close the post.
+
+**Links never go in the post body — first comment only.** Two independent LinkedIn sources
+confirm it kills reach. That is a platform fact, not a CTA choice, and it is not the Brief's
+to decide.
 
 ---
 
@@ -247,6 +290,9 @@ throws away either the visual or the argument.
 | Hits any NOT-list item | **kill** |
 | Core claim failed verification | **kill** |
 | `READER` cannot be decided | **hold** |
+| `PLATFORM` is `linkedin` and `BUCKET` is missing | **hold** — name the bucket |
+| `BUCKET` is `bofu`, or the idea needs a case study, testimonial or client result | **kill** — no material exists |
+| `BUCKET` is `moving` and the post adds no read of its own | **kill** — that is a reaction, not commentary |
 | `OFFER` is `product` | **hold** — nothing to sell yet |
 | The ring is full for this seven | **hold** — name the day it opens |
 | Real, but the proof isn't there yet | **hold** — state exactly what would unblock it |
@@ -255,8 +301,13 @@ throws away either the visual or the argument.
 **A kill is a successful run.** Report it as one. A summary published under his name costs
 more than silence.
 
-**ROUTE** — default `both` on a publish. LinkedIn ships same-day; the reel is recorded only
-if the written version landed.
+**ROUTE** — **corrected Day 28.** This field previously defaulted to `both`, which contradicted
+`PLATFORM — exactly one` three sections above. It is not a second platform field.
+
+`ROUTE` records the **sequencing intent** across two separate Briefs, never a target on this
+one. Values: `single` (this piece only) · `linkedin-first` (a companion reel Brief may follow
+**only if the written version landed**). **A `linkedin-first` route still produces two Briefs
+and two drafts.** It never licenses one draft going to two platforms.
 
 ---
 
@@ -280,3 +331,7 @@ login · Apify free tier · local files in `brain/reference/`. Free tiers only.
 **Open:** the Mode A / Mode B split is under review. Shubham wants the labels gone and a
 third branch added for *something you thought* — a raw note or opinion with no external
 source and no build behind it. Not yet decided; until it is, A and B stand.
+11. **Every `linkedin` Brief carries `BUCKET` and `CTA`.** `linkedin-writer` Gate 1 fails
+    without them. `CTA: none` is a real answer — write it rather than leaving the field blank.
+12. **Never write `both` in `PLATFORM`.** One piece, one platform, one writer. A piece that
+    fits both is two Briefs.

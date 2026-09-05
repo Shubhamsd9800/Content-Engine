@@ -1,6 +1,6 @@
 ---
 name: script-writer
-description: WRITE. Turns a Brief into an Instagram reel script — three aligned tracks (spoken, on-screen text, visual), with stated format and language decisions, 3 variants each carrying 3 hook options. Writes to exactly one reader, refuses format-led content, and carries every tool's real stage. Built on the five-step framework and expectations-vs-reality. Use when a Brief has ROUTE reel or both.
+description: WRITE. Turns a Brief into an Instagram reel script — three aligned tracks (spoken, on-screen text, visual), with stated format and language decisions, 3 variants each carrying 3 hook options. Writes to exactly one reader, refuses format-led content, and carries every tool's real stage. Built on the five-step framework and expectations-vs-reality. Use when a Brief has PLATFORM instagram. Never for LinkedIn — that is linkedin-writer.
 ---
 
 # script-writer — Instagram reels
@@ -157,7 +157,11 @@ failure alone, never as the punchline.
 Summarise, remind them of the pain solved, leave on a high note — likes, shares and rewatches
 come disproportionately from the final impression. **Engineer one peak.**
 
-**CTA at zero followers: conversation or return only.** Never "DM me."
+**THE CTA COMES FROM THE BRIEF. Never decided here. — corrected Day 28.**
+
+`none` is the default and it is valid and common · `question` · `link` (first comment only,
+never the body). Forced CTAs are a banned pattern. This line previously hardcoded
+*"conversation or return only"*, which the Brief-decides rule **replaces**. Never "DM me."
 
 ---
 

@@ -1,6 +1,13 @@
 # workflow-status.md — the engine, step by step, with live status
 
-**Last revised:** Day 26, 31 Aug 2026 — **end of day.** Pipeline A ran end to end for the first time.
+**Last revised:** Day 29, 5 Sep 2026 — **morning.** See **DAY 29** at the foot of this file
+for what is true today. Day 26, 27 and 28 sections are kept as history and are superseded.
+
+> ### ⚠ UPDATE THIS FILE AT EVERY EVENING WRAP-UP.
+> It is read first, every session. It sat frozen at Day 26 through Days 27 and 28 and
+> misrouted the Day 29 morning session, which re-ran a CPIO worksheet that had already been
+> completed and approved. **A stale status file is worse than a missing one, because it reads
+> as authoritative.**
 **What this file is:** the running map of the engine and where every step actually stands.
 Companion to `engine/design/blueprint.md` — the single design document. This file holds the live task list; the blueprint holds the design.
 **This file carries STATE, not design.** When they disagree: they win on design, this wins on
@@ -157,7 +164,7 @@ from publishing.**
 
 ---
 
-## SKILL STATUS — ✅ **ALL 10 BUILT** *(corrected Day 27)*
+## SKILL STATUS — ✅ **ALL 11 BUILT** *(voice-builder Day 27 · linkedin-writer v2 Day 28)*
 
 | Skill | State | Pipeline |
 |---|---|---|
@@ -334,3 +341,282 @@ still never run and `published.md` is still empty — day seventeen.**
 - **Deletion is blocked on the mount.** Move to `_to_delete/` and tell Shubham.
 - **Folder grants do not persist across sessions.** Re-request each time.
 - **Never the brand account, never its browser profile.** Burner in its own Chrome install.
+
+
+---
+---
+
+# DAY 28 — 2 Sep 2026. THE LINKEDIN REBUILD.
+
+**Everything above this line predates the split.** Where it disagrees with this section, this
+section wins.
+
+## WHAT CHANGED
+
+**LinkedIn no longer writes from `playbook.md`.** It has its own file, built from a LinkedIn
+practitioner's own system — a founder who has written 5,000+ posts for 50+ VC-backed founders.
+Three sources distilled: his 4,000-word guide and two reel transcripts.
+
+**This closed the oldest weakness in the engine.** §5 LINKEDIN was five findings, four
+single-source, **all extracted from Instagram captions.** It is now retired.
+
+| File | State |
+|---|---|
+| **`brain/linkedin-playbook.md`** | ✅ **NEW.** The LinkedIn writing file. `linkedin-writer` reads it first, every time. |
+| **`brain/reference/frameworks/hat-tip-linkedin.md`** | ✅ **NEW.** The raw distilled source. All 9 steps, CPIO, THBM, the editing checklist, the banned list, and PART 8 — everything switched off, with switch-on conditions. |
+| `brain/playbook.md` | ✅ **§5 RETIRED** to a pointer. 1,142 → 1,113 lines. Instagram only now. |
+| `engine/skills/linkedin-writer/SKILL.md` | ✅ **REBUILT v2.** Three gates. v1 preserved at `_to_delete/day28-linkedin-writer-v1/`. |
+| `engine/skills/brief-builder/SKILL.md` | ✅ `BUCKET` and `CTA` added. `ROUTE` corrected. |
+| `work/_TEMPLATE-brief.md` | ✅ `PLATFORM` added — **it had been missing since Day 26** — plus `BUCKET` and `CTA`. |
+| `engine/skills/script-doctor/SKILL.md` | ✅ Checks 15, 16, 17 added. Check 8's LinkedIn criteria corrected. Now reads the right playbook per platform. |
+| `CLAUDE.md` | ✅ Routing rule added at session start. Stale `swipe` reference corrected. |
+
+## THE ROUTING RULE — the single most important thing on this page
+
+```
+PLATFORM = instagram   →   brain/playbook.md            →  script-writer
+PLATFORM = linkedin    →   brain/linkedin-playbook.md   →  linkedin-writer
+```
+
+**The two files contradict each other on purpose and must never be reconciled.**
+**S02 THE CORRECTED ASSUMPTION** is `[C]` tier in `playbook.md` and a **banned pattern** on
+LinkedIn. Both are correct. Different platforms, different rulebooks.
+
+## DECIDED DAY 28 — do not relitigate
+
+- **Copywriting is the craft, ghostwriting is the delivery model.** Not alternatives. One
+  skill, with `READER` and `VOICE` as inputs, serves his account today and a client later.
+- **THE ARTIFACT HOOK replaces the credential hook — permanently.** Every hook in the source
+  runs on *"5,000 posts, 50 founders, YC/a16z."* At 1.5 years, no employer named, no clients
+  and money numbers off limits, that register is unavailable. Authority comes from **the
+  build, the breakage, the decision, the real number.** Two independent sources confirmed the
+  credential hook is the genre default, which is exactly why this substitution is written into
+  the playbook rather than left to judgement.
+- **THE CTA CONTRADICTION IS CLOSED.** `linkedin-writer` v1 hardcoded conversation-only.
+  **The Brief decides.** `CTA: none` is the default and a valid outcome. Forced CTAs are a
+  banned pattern.
+- **Links never in the post body — first comment only.** Confirmed by two independent
+  LinkedIn sources. No longer single-source.
+- **Three idea buckets replace sales-call mining:** `built` (ledger) · `stuck` (real
+  stuck-points) · `moving` (AI and building news). **`moving` is a full TOF bucket** — but a
+  screenshot plus a reaction is not a post; a screenshot plus a read is.
+- **BOF is switched off.** No case studies, no testimonials, no client results. A Brief that
+  needs one is a kill.
+- **The one-idea-per-line rhythm is DEAD.** Was `[C]`, 3 accounts, from Instagram captions.
+  The LinkedIn source contradicts it directly and wins.
+- **One draft by default, not three.** CPIO already made the decisions three variants used to
+  explore. Three variants only when the angle is genuinely uncertain — and then each needs its
+  own CPIO worksheet.
+
+## THE FORMAT GAP — half closed
+
+Open since Day 24. **CPIO's PACKAGE stage closes it for LinkedIn** — the package table decides
+story / framework / list / commentary / process from what the idea is. **Still open for
+Instagram.**
+
+## STILL OPEN
+
+- **Cadence.** Untested alongside a full-time job. Decided by evidence, not by plan.
+- **Whether the mixed peer/buyer audience holds.** Twenty posts answers it.
+- **`voice.md` DERIVED is empty by design.** Fills from the first rewrite at B6.
+- **`script-writer` and `playbook.md` §5's old CTA line** — check it does not still contradict
+  the Brief-decides rule.
+- **Nine parts of the LinkedIn system are switched off**, all recorded with switch-on
+  conditions in `hat-tip-linkedin.md` PART 8.
+
+## ✅ THE SKILLS JUNCTION — CHECKED AND CLOSED, 5 Sep 2026
+
+**This was carried as an unverified flag on Day 28. It is now verified and it is fine.**
+
+**All ELEVEN engine skills are NTFS junctions** in `%USERPROFILE%\.claude\skills`, each
+pointing at `D:\Claude-cowork\Content-Engine\engine\skills\<name>`:
+
+```
+brief-builder · creator-analyst · linkedin-writer · niche-finder · qualify · scout
+script-doctor · script-writer · thought-partner · topic-scout · voice-builder
+```
+
+`linkedin-writer` reports **v2 · rebuilt Day 28**. Confirmed by reading the file through the
+junction, not by inspecting the link.
+
+**What this means, and it is the useful part: there is no copy step and no drift.** Editing a
+file in `engine/skills/` changes what `/skillname` runs, immediately. A future session does
+not need to sync anything, and **must not** "fix" this by copying files into
+`%USERPROFILE%` — that would replace a live link with a stale duplicate.
+
+**A Cowork session still cannot see that folder** — it is outside every mount and is a
+Claude-internal location. Re-verification, if ever needed, runs from PowerShell:
+
+```
+Get-ChildItem "$env:USERPROFILE\.claude\skills" | Select-Object Name, LinkType, Target
+```
+
+## PIPELINE B — IT HAS RUN. IT STOPPED ONE STEP SHORT.
+
+**CORRECTED DAY 29.** This section previously said Pipeline B needed *"exactly one input: an
+idea."* **That is no longer true and has not been true since Day 28.**
+
+| Step | Status |
+|---|---|
+| B3 `brief-builder` | ✅ **RAN Day 28.** First Brief ever: `2026-09-02-learned-in-private`, verdict `publish` |
+| B4 `linkedin-writer` v2 | ✅ **RAN Day 28.** CPIO worksheet → draft |
+| B5 `script-doctor` | ✅ **RAN Day 28 — PASSED** |
+| B6 Shubham rewrites | ⚠️ **five rounds happened in chat and none were logged** |
+| B7 PUBLISH | ⬜ **still never happened — day twenty-nine** |
+
+**The draft is on disk as of Day 29:** `work/drafts/2026-09-02-learned-in-private.md`,
+1,228 characters, CTA = repo link in the first comment. For two days it existed only in a
+chat transcript.
+
+**It does not need an idea. It needs the post to go out.**
+
+---
+---
+
+## DAY 29 — 5 Sep 2026
+
+**3 and 4 September were lost** — tokens ran out on the 3rd, the 4th went elsewhere. **The post
+has now been written, approved and unpublished for two days, which is the exact pattern the
+post is about.**
+
+### CLOSED THIS MORNING
+
+| Was | Now |
+|---|---|
+| **The approved draft existed only in the Day 28 chat** | **on disk** — `work/drafts/2026-09-02-learned-in-private.md`, 1,228 chars |
+| `.git/index.lock` blocking `daily-push` — created by a read-only `git status` run from Cowork | **moved out of `.git/` into `_to_delete/`.** The mount permits a move where it forbids a delete |
+| `brief-builder` had **no BUCKET and no CTA field** | **added** — buckets `built`/`stuck`/`moving` (`bof` illegal), CTA `none`/`question`/`link` with `none` the default · 2 new kill conditions · stale Day-27 §5 note replaced · `ROUTE` retired to `single` |
+| `_TEMPLATE-brief.md` had **no PLATFORM field at all** — missing since Day 26 | **PLATFORM · BUCKET · CTA added** with field notes |
+| `CLAUDE.md` had no LinkedIn routing rule | **THE ROUTING RULE added at session start** · rule 11 never git from Cowork · rule 12 the Brief decides the CTA |
+| `script-writer` hardcoded *"conversation or return only"* and triggered on `ROUTE reel or both` | **both corrected** — the Brief decides; triggers on `PLATFORM instagram` |
+| `README.md` showed `swipe.md` and "all 10" skills | **corrected** — two playbooks, 11 skills |
+| `blueprint.md` §02 draws one shared writing file | **STALE banner added at the top.** 12 `swipe.md` references remain — a real rewrite, scheduled not done |
+| **`script-doctor` was missing checks 15/16/17** | **RECOVERED from the original Day 28 attachment** — 15 LinkedIn banned patterns · 16 CTA matches the Brief · 17 mobile shape · check 8 split by platform. **Not reconstructed. The real file.** |
+| Skills junction unverified | **verified from PowerShell — all 11 are junctions into the repo.** No copy step, no drift |
+
+### THE BRAND SYSTEM — CLOSED AT THE SOURCE, DAY 29
+
+**Shubham confirmed: the brand system is not used for him, and `brand.json` is not to be read.**
+`CLAUDE.md`'s DESIGN section is replaced with an explicit out-of-scope block that names the Day
+28 override as the reason it exists.
+
+- A tool, skill or prompt that supplies its own design defaults → **use those, unchanged**
+- Nothing supplied → **ask him.** Never reach for a default
+- Only when he asks for a brand system in that request
+
+**The rule now lives in the file, not only in memory.** The old Poppins / Instrument Serif /
+dark-palette system is recorded as a historical note explicitly marked **not a fallback**.
+
+### ⛔ ONE THING BLOCKS THE REPO GOING PUBLIC
+
+**The employer name appears 12 times in files that will be pushed**, across `about-me.md` (×2),
+`ledger.md`, `niche.md`, `CLAUDE.md` (×2), `brief-builder`, `niche-finder` (×2), `script-doctor`,
+`voice-builder` and `_TEMPLATE-brief.md`.
+
+**Every instance is a rule saying the name must never appear.** `about-me.md` line 13 reads
+*"No employer appears here or anywhere in public content — <name> is banned under every
+framing."* **The rule that forbids the name is the thing that publishes it.**
+
+Two costs, and the second is the sharp one:
+
+1. The public role is *builds and ships software products, solo — no employer anywhere, ever.*
+   The post says *"the whole system is on GitHub."* Click the link, the employer is there.
+2. **A file reading "never talk about <employer>" scans as a concealment policy, and colleagues
+   can find it.** The name alone would be harmless. The rule is what looks bad.
+
+`archive/` and `_to_delete/` hold 18 more and are **gitignored** — those never reach GitHub.
+
+**DECIDED DAY 29 — SHUBHAM'S CALL: LEAVE IT. NOT AN ISSUE. DO NOT RE-RAISE.**
+The case above was made once and declined. The repo goes public with the name in place.
+**A future session must not "helpfully" scrub these 12 lines** — it is a settled decision,
+not an oversight. Recorded in full only so the reasoning is not re-derived from scratch.
+
+### THE PUSH COUNT — the Day 28 note overstated it
+
+**`84d8603` is on `origin/main`** (merged, PR #2). `linkedin-playbook.md`, `hat-tip-linkedin.md`
+and the first Brief are **already backed up**. Only Day 28 and Day 29 edits are unpushed —
+roughly a dozen paths, not ~50 files. Push is a two-minute job, not a rescue.
+
+### THE ORDER
+
+```
+1  ~~employer-name swap~~  DECLINED Day 29. Settled. Not a blocker.
+2  push to MAIN            daily-push. Lock is cleared. main must be current
+                           BEFORE public, or visitors land on a repo with no
+                           LinkedIn layer.
+3  repo public             browser setting on github.com, not a git command
+4  POST IT                 text only, no carousel. Link in the FIRST COMMENT.
+5  paste the published     script-doctor on the real diff
+   text back                 -> published.md · corrections.md · voice.md OBSERVED
+```
+
+### BRANCHING — decided Day 29
+
+**`pipeline-v3` is retired as a concept.** It was named for a restructure that finished on Day
+25; it is now just the working branch and the name misleads. **No `v4`, `v5`, `v6` branches.**
+
+- **Work on `main`.** One person, no reviewer, no CI, nothing that can break.
+- **Version markers are TAGS, not branches** — `git tag v3`, `git tag day-29`. A tag labels a
+  point in history without forking the work. That is what was actually wanted.
+- **The default branch on GitHub decides what a visitor sees.** It must be `main`, and `main`
+  must be current, before visibility is flipped.
+
+**Steps 1–3 are plumbing. Step 4 is the day.**
+
+> **B6 WARNING.** The AI's original Day 28 draft was never saved — only Shubham's rewritten
+> version survives. **The rewrite diff for post one cannot be computed**, so `corrections.md`
+> and `voice.md` DERIVED get nothing from it unless the Day 28 chat is still open. **From post
+> two onward, save the AI draft to `work/drafts/` BEFORE the rewrite.**
+
+### BUILT DAY 29 — the workflow reference, so gates stop being skipped
+
+**`engine/design/how-to-run-the-pipeline.md`** — NEW, 285 lines. The OPERATING checklist: STEP 0 *where are we*
+answered from disk, both writers gate by gate, `script-doctor`'s 17 checks, what happens after
+publishing, and the standing rules. **`CLAUDE.md` session-start now points at it** for any task
+that writes, reviews or plans a post.
+
+**Content Engine Field Manual** — the picture version, with diagrams:
+`https://claude.ai/code/artifact/4746dfe9-6e6e-453f-b177-80cee895d532`
+Three layers · both pipelines · the fork · all 18 gates · every file's real state.
+
+**Four reference files now, and they do not overlap:** `blueprint.md` = why · `status.md` = what
+is true today · `how-to-run-the-pipeline.md` = how to run one post · the artifact = the same thing as a picture.
+**When something changes, update `how-to-run-the-pipeline.md` AND the artifact. Never write a second one.**
+
+### THE TWO-SESSION COLLISION — what happened, and the rule that came out of it
+
+**Two Claude sessions edited this folder at the same time on Day 29 and silently overwrote each
+other twice.**
+
+- `status.md` — a second session restored the authentic Day 28 attachment, which **erased the
+  Day 29 record**. Rebuilt on top of the Day 28 base, which is the better base. Nothing lost.
+- `CLAUDE.md` — the same session's restore **reverted Shubham's brand-system decision.**
+  `brand.json` and Poppins came back as live instructions. **Restored, with a marker inside the
+  block** so that if they reappear it reads as the revert happening again, not a new decision.
+
+**`CLAUDE.md` rule 13 added: ONE SESSION PER FOLDER.** Before writing a shared file, check
+whether it changed since you read it. **The other session was closed at the end of Day 29.**
+
+### ALSO DONE, LATE DAY 29
+
+- **`engine/design/runbook.md` renamed → `engine/design/how-to-run-the-pipeline.md`.** The name
+  now states its job. Every pointer in `CLAUDE.md` and this file updated; zero stale references.
+- **`.gitignore` now excludes `.agents/` and `skills-lock.json`** — install artefacts from the
+  PAID `belt` carousel renderer, abandoned Day 28. **Shubham's call: ignore, do not push.**
+  They would otherwise have entered a public repo.
+- **Empty leftovers, not removed:** `work/creators/_test/` and `.claude/`. Harmless; noted only
+  so they are not mistaken for live folders.
+
+### STILL TO DO — handed to Claude Code, not done from Cowork
+
+1. **Rewrite `README.md`** as the public front door — the workflow, simply, with diagrams. It is
+   what a visitor from the first comment reads. Currently still shows `swipe.md` and "all 10
+   skills".
+2. **`daily-push`**, then **PR into `main`**, then Shubham flips visibility himself.
+
+### POST TWO — decided in principle, not yet a Brief
+
+`BUCKET = moving`, TOF, ring 4. AI industry news with a read attached. **`work/ideas/queue.md`
+is empty** — that is where a link lands before it becomes a Brief. **The commentary rule
+governs it:** a screenshot plus a reaction is not a post; a screenshot plus *your read* is.
+*"Software engineers are dead"* is a reaction, and everyone already has one.

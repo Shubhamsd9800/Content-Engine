@@ -34,10 +34,20 @@ STAGE           found | installed | testing | shipped | n/a
 STANDING TYPE   built-for-self | delivered-to-client
 NOT-LIST        ✓ cleared — or the item it hits
 
+PLATFORM        instagram | linkedin    ← exactly one. "both" is not a legal value.
+BUCKET          built | stuck | moving  ← REQUIRED on linkedin. optional on instagram.
+CTA             none | question | offer ← REQUIRED on linkedin. "none" is the default.
+
 VERDICT         publish | hold | kill
 REASON          one line
-ROUTE           linkedin | reel | both
+ROUTE           single | linkedin-first
 ```
+
+> **THREE FIELDS ADDED AND ONE CORRECTED, DAY 28.**
+> `PLATFORM` was added to `brief-builder` on Day 26 and **never reached this template** — a
+> Brief written from this file alone would have had no platform at all. `BUCKET` and `CTA` are
+> required by `linkedin-writer` Gate 1, which fails without them. `ROUTE` no longer accepts
+> `both`, because it was contradicting `PLATFORM — exactly one`.
 
 ---
 
@@ -51,6 +61,8 @@ A kill is a **successful run.** Report it as one.
 | `RING` would be 5 | same cost to make, zero qualified attention |
 | `NOT-LIST` hits any item | the list exists to be obeyed, not weighed |
 | `READER` cannot be decided | a post for both readers is a post for neither |
+| `BUCKET` needs a case study, testimonial or client result | no material exists. BUILT, NOT DELIVERED. |
+| `BUCKET` is `moving` and the post adds no read of its own | a reaction is not commentary |
 
 ---
 
@@ -98,3 +110,38 @@ Three claims is three Briefs, never merged.
 
 Killed Briefs stay in `briefs/`. A kill is data — it stops the same dead idea being
 reconsidered in three weeks.
+
+---
+
+## FIELD NOTES — added Day 28
+
+**PLATFORM** — exactly one, and it decides the writer and the writing file.
+```
+instagram  →  script-writer     reads  brain/playbook.md
+linkedin   →  linkedin-writer   reads  brain/linkedin-playbook.md
+```
+**The test: is there something to LOOK AT?** If the value survives being read with the sound
+off and no screen — LinkedIn. If the value IS the thing on screen — Instagram. A piece that
+genuinely fits both is **two Briefs and two drafts**, never one draft sent twice.
+
+**BUCKET** — where the idea came from. Required on `linkedin`.
+```
+built    brain/ledger.md, a built-for-self entry        MOF
+stuck    a real stuck-point, past or present            MOF
+moving   what is happening in AI and building this week TOF
+```
+`moving` is a full bucket, not a lesser one — but a screenshot plus a reaction is not a post.
+**A screenshot plus a read is.** Ask the brand promise: who is stuck, and what do they leave
+with?
+
+**CTA** — decided here, never by the writer.
+```
+none      the post ends when the idea ends. THE DEFAULT. Valid and common.
+question  one they can answer from their own experience — never one testing
+          whether they read the post
+offer     a plain statement of what he builds and who it is for.
+          buyer + BOFU only. A statement, never a pitch.
+```
+**Forced CTAs are a banned pattern on LinkedIn.** If none is earned, write `none`.
+**Links never go in the post body — first comment only.** That is a platform fact, not a
+choice this field makes.
