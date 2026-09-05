@@ -23,7 +23,7 @@ you have an idea
    ├─ 3  HOW DO THE WORDS GO inside that shape?                      → §2
    ├─ 4  WHAT IS THE FIRST LINE?                                     → §3
    ├─ 5  WHAT JOB IS THE CAPTION DOING?                              → §4
-   ├─ 6  IS THIS LINKEDIN? read before writing a word                → §5
+   ├─ 6  IS THIS LINKEDIN?  → stop. brain/linkedin-playbook.md, not this file.
    ├─ 7  HOW DO I SHOOT IT?                                          → §6
    ├─ 8  WHAT MUST HOLD?                                             → §7
    └─ 9  WHAT DO I NOT DO?                                           → §8
@@ -835,57 +835,28 @@ rendered as a list. Reads on a phone with no edit. `[thevibefounder]`
 ---
 ---
 
-# §5 · LINKEDIN — the collapse to one channel
+# §5 · LINKEDIN — RETIRED, DAY 28
 
-> **Day 26 raised this as new work to be built. It did not need building. It needed reading.**
-> All eight reel shapes assume three channels — spoken, on-screen text, visual. **LinkedIn has
-> one.** **S02, S07, S08, S09, S10 survive. S01, S03, S05, S06 do not** — all four depend on
-> something being visible.
-
-### THE STRUCTURE — `nick_saraev` **[S]**, and it is the model
-
-His captions are 200-word written articles. **Paste one into LinkedIn and nothing is missing,
-because nothing in it ever depended on a visual.**
-```
-line 1     the hook
-line 2     the claim, plain
-(blank)
-item 1     name → what it does → THE FAILURE IT AVOIDS
-item 2     …
-item 5     …
-(blank)
-close      ONE line of synthesis — what the five together add up to
-```
-*"Together, these five turn Claude Code from a coder into an actual design partner."*
-**He is flat at 2.50× on Instagram and he is the best written model on the watchlist.**
-
-### THE RHYTHM — **[C]** 3 accounts
-
-**One idea per line. Blank line between.** The pacing lives in the line breaks instead of the
-edit — **which is exactly why it survives the collapse.**
-```
-You Don't Need a GPU Anymore
-
-Nvidia might not like this one.
-
-No complicated cloud GPU setup.
-No manually configuring batch sizes.
-No spending days debugging training scripts.
-```
-`[thevibefounder X]` `[theautomationguy #4]` `[vaibhavsisinty #11/#3]`
-
-### THE ARGUMENT — `_roshnichellani` **[S]**
-Her captions state the thesis her reels only imply. **The model for a piece where the value is
-entirely in the reasoning.**
-
-### THE READY-MADE FORM — **THE OPEN LETTER** `[socialmasla #9]` **[S]**
-**Already a LinkedIn post.** See S08.
-
-### WHAT CARRIES ACROSS, AND WHAT DOES NOT
-
-| survives to text untouched | does not |
-|---|---|
-| performing the belief · the pre-emptive objection · the road not taken · the returned number · the identity upgrade · the two-sentence reversal · the consequence chain · the failure-avoided clause · the spoken thought · the contrast portrait · the quit point · the lever · the two-question open · the open letter · S09 · S10 | anything needing a visible artifact · the null caption · the title-only caption · the series card · S01 · S03 · S05 · S06 |
+> **LinkedIn is no longer written from this file.**
+>
+> This playbook was built from 15 creators' Instagram reels. Its shapes assume three
+> channels — spoken, on-screen text, visual. LinkedIn has one, and it now has its own
+> writing file built from a LinkedIn practitioner's own system.
+>
+> ### → **`brain/linkedin-playbook.md`**
+>
+> That file is what `linkedin-writer` reads. **Nothing in this playbook decides a LinkedIn
+> post.**
+>
+> **The three findings that used to live here were moved, not deleted.** They are in
+> `linkedin-playbook.md` §6, tagged as weak evidence — they came from Instagram captions,
+> not LinkedIn posts, and they rank below everything the new source says. One of them (the
+> one-idea-per-line rhythm) was **overruled outright** by LinkedIn-native evidence.
+>
+> **These two files contradict each other on purpose.** The clearest case: **S02 — THE
+> CORRECTED ASSUMPTION** is `[C]` tier and one of the strongest shapes here, and it is a
+> **banned pattern** on LinkedIn. Both are correct. Two platforms, two rulebooks.
+> **Do not reconcile them.**
 
 ---
 ---

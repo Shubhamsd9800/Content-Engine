@@ -19,7 +19,31 @@ Read `README.md` first, this second, `engine/design/blueprint.md` third.
 4. **Never load `brain/reference/transcripts/`** unless explicitly distilling a source. Those files are
    6,000–12,000 words of filler around 400 words of framework. Loading them makes output
    vaguer, not sharper.
-5. Do the work.
+5. **IF THE TASK WRITES, REVIEWS OR PLANS A POST — read `engine/design/how-to-run-the-pipeline.md` FIRST.**
+   It is the operating checklist: **STEP 0 answers *where are we* from the folder rather than
+   from a summary**, then both writers gate by gate, `script-doctor`'s 17 checks, and what
+   happens after publishing. The picture version, with diagrams, is the **Content Engine Field
+   Manual** artifact linked at the top of that file — open it when the shape is unclear.
+   **When something changes, update `how-to-run-the-pipeline.md` AND the artifact. Never write a second one.**
+
+6. **Writing a post? The platform decides which file you read — and you read ONE.**
+
+```
+   PLATFORM = instagram   →   brain/playbook.md            script-writer
+   PLATFORM = linkedin    →   brain/linkedin-playbook.md   linkedin-writer
+```
+
+   **Never both. They contradict each other on purpose.** `playbook.md` was built from 15
+   creators' Instagram reels — three channels: spoken, on-screen text, visual. LinkedIn has
+   one, and `linkedin-playbook.md` was built from a LinkedIn practitioner's own system
+   (added Day 28, source in `brain/reference/frameworks/hat-tip-linkedin.md`).
+
+   The clearest case: **S02 THE CORRECTED ASSUMPTION** — *"You probably think X. You'd be
+   wrong."* — is `[C]` tier and one of the strongest shapes in `playbook.md`, and a **banned
+   pattern** on LinkedIn. Both files are correct. **Do not reconcile them.** `playbook.md`
+   §5 is retired and holds nothing but a pointer.
+
+6. Do the work.
 
 ## This folder is not
 
@@ -58,12 +82,29 @@ call without relitigating it.
 **10 — Ask before moving, renaming or deleting anything.** Show what changes, wait for a
 yes. Before a multi-step task, list the steps and wait for a go-ahead.
 
+**11 — Never run git from Cowork.** Read-only commands included — `git status` takes the lock
+too, and a git command through the mount leaves an undeletable `.git/index.lock` that makes
+`daily-push` fail. Push from Claude Code or PowerShell only. **An existing lock can be MOVED
+out of `.git/` into `_to_delete/`**, which the mount permits where it forbids a delete.
+
+**12 — The Brief decides the CTA.** Never a writer. `none` is the default and it is valid and
+common. Links go in the **first comment**, never the post body.
+
+**13 — One session per folder.** On Day 29 two sessions edited `status.md` and `CLAUDE.md` at
+the same time and silently overwrote each other's work, including a decision Shubham had just
+made. Before writing a shared file, check whether it changed since you read it.
+
 ---
 
 ## THE INTERVIEW METHOD
 
 Every `brain/` file is filled the same way. Claude never writes one from inference. This
-applies to ledger, niche, voice, swipe, strategy and psychology without exception.
+applies to **ledger, niche, voice, about-me, strategy and psychology** without exception.
+
+> **Corrected Day 28.** This line used to name `swipe` — archived Day 26, absorbed into
+> `playbook.md`. **`playbook.md` and `linkedin-playbook.md` are NOT interview files.** They
+> are built from distilled sources and corrected by published results, never by interview.
+> Do not apply this method to them.
 
 1. **Candidates, not entries.** Claude brings a short list of points — gaps it can see,
    topics it noticed. Never a written entry.
@@ -220,32 +261,30 @@ single-word paragraphs used as drama · opening with credentials instead of a pr
 
 ## DESIGN — artifacts and UI
 
-**Poppins** for all text. **Instrument Serif Italic** for emphasis — **used often, not saved
-for one pull-quote.** It carries lead-ins, key phrases, field hints, section titles and asides.
-If a page has one italic line in it, that is too few.
-**DARK MODE. Committed, no toggle** — revised Day 25 s2; this said light-only until then.
-Every colour painted explicitly from tokens, never left to the host's theme.
-**Body line-height 1.6. Poppins 300 for body, 500 for headings.** Never set body text below
-15px, and never shrink a field someone has to type into.
-
-**DECIDED Day 25, session 2 — this is now the ONLY type system in the project.**
-Clash Display / Geist Sans / Geist Mono at `_plugins/brand-os/` are **RETIRED on type.**
-This covers everything: artifacts, diagrams, working docs, brand assets, thumbnails, post
-graphics. There is no second font system and nothing to ask about. `brand-os` still governs
-**colour** — read `brand.json`, never hardcode a hex — but its typography block is superseded
-by this one. If `brand-os` is ever regenerated, its type must be regenerated to match here.
-**DARK PALETTE — the live one.**
-`#0D1317` ground · `#141D23` surface · `#19242B` raised · `#26343D` edge · `#1E2A32` edge-soft ·
-`#E9EFF3` text · `#AEBCC6` text-2 · `#7A8994` muted · `#57A9F8` accent · `#122A3E` accent-soft ·
-`#2C5378` accent-line · `#4FC490` ready · `#FF848A` blocked · `#EAB855` pending ·
-`#B6A6F0` violet (the mixed-column tag).
-
-*Superseded light palette, kept only so an older artifact can be read:*
-`#FFFFFF` ground · `#F7F8FA` surface · `#E3E6EB` edge · `#16191D` text ·
-`#474C55` text-2 · `#767C87` muted · `#0B6BCB` accent ·
-`#187A4B` ready · `#C22A2F` blocked · `#8A5A00` pending.
-
----
+> ## ⛔ THE BRAND SYSTEM IS OUT OF SCOPE. DECIDED DAY 28, CONFIRMED DAY 29.
+>
+> **Do not read `_plugins/brand-os/brand-output/brand.json`. Do not apply a brand palette, a
+> fixed set of colours, or a set typography to anything made for Shubham.** Not to artifacts,
+> diagrams, working docs, thumbnails, carousels or post graphics. Not lightly. Not as a
+> starting point.
+>
+> **This section is what caused the override on Day 28.** It previously told every session to
+> read `brand.json` for colour and use Poppins / Instrument Serif. A brand system was then
+> applied to a carousel built from an external prompt that carried its own design, overriding
+> Shubham's own choice. He called it out. **The instruction is reversed here, at the source.**
+>
+> **RESTORED DAY 29 — this block was written once and silently reverted** when a second
+> session overwrote `CLAUDE.md`. If `brand.json` or Poppins reappear as an instruction in this
+> file, that is the revert happening again, not a new decision.
+>
+> **What to do instead:**
+> - **A tool, skill or prompt supplies its own design defaults → use those, unchanged.**
+> - **Nothing is supplied → ask him.** Never reach for a default.
+> - **He asks for a brand system in that request → then, and only then.**
+>
+> *Historical note, not an instruction:* the retired system was Poppins / Instrument Serif
+> Italic on a dark palette, with `brand-os` governing colour. It is in git history.
+> **It is not a fallback and it is not a starting point.**
 
 ## MEMORY
 

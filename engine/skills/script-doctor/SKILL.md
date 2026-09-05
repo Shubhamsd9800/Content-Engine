@@ -11,6 +11,15 @@ on the AI draft defeats the point.
 **Read:** his rewrite · the original draft · the Brief · `brain/niche.md` · `brain/voice.md`
 · `brain/psychology.md` · `work/log/corrections.md`
 
+**And, by platform — added Day 28:**
+```
+PLATFORM = linkedin    →  brain/linkedin-playbook.md   §4 checklist and §5 banned list
+PLATFORM = instagram   →  brain/playbook.md            §7 rules and §8 do-nots
+```
+**Never read the other one.** The two files contradict each other on purpose — a pattern that
+is `[C]` tier on Instagram can be a banned pattern on LinkedIn. Reading the wrong file makes
+this skill flag correct writing and pass broken writing.
+
 ---
 
 > **You do not rewrite him. You flag.**
@@ -73,8 +82,21 @@ this a repost with a caption?**
 **7 · RING 5 DRIFT** — rewrites broaden. Did a ring-1 or ring-2 piece get generalised into
 *"AI is changing everything"* territory? That is a **stop**, not a flag.
 
-**8 · HOOK INTEGRITY** — did it survive? Still under ~10 words on LinkedIn, ~8 on a reel,
-still 4 S's, still a named mechanic? A weakened hook is usually a hook that got *explained*.
+**8 · HOOK INTEGRITY** — did it survive? A weakened hook is usually a hook that got
+*explained*. **The criteria differ by platform — corrected Day 28:**
+
+```
+REEL       ~8 words. 4 S's. A named mechanic.
+LINKEDIN   The first 2 lines, before the ~210-character fold.
+           Does it still open a CURIOSITY GAP — enough to see the value,
+           with the useful answer held back?
+           Which of the 3 mechanisms is it using?
+           Does the body still PAY OFF the promise the hook makes?
+           An unpaid hook is a stop, not a flag.
+```
+
+**The earlier "~10 words on LinkedIn" rule was wrong** and came from reel logic. LinkedIn
+hooks are two lines, not ten words.
 
 **And the framing check:** does it still open on **pain or desire**, or did the rewrite move
 it to practitioner level? *"My chunk sizes were perfect"* is a practitioner opening and it
@@ -99,6 +121,54 @@ generic post.
 
 **14 · TRIPLE HOOK ALIGNMENT** — reels only. Do spoken, on-screen and visual say the same
 thing in different words?
+
+---
+
+**15 · LINKEDIN BANNED PATTERNS — LinkedIn only. Added Day 28.**
+
+`brain/linkedin-playbook.md` §5 carries 24 rules. Rules 1–16 are the source's prohibited
+patterns; **17–24 are engine rules and outrank everything.** Scan the rewrite for all of them.
+The ones a rewrite most often introduces:
+
+```
+⚠  A common belief stated, then dramatically corrected
+   ← THE TRAP. This is playbook.md S02, [C] tier on Instagram, BANNED here.
+     If he has written reels, this is the pattern his hand reaches for.
+⚠  Rhetorical questions
+⚠  Em dashes
+⚠  Repeated sentence openings used to build rhythm
+⚠  Stacked sentence fragments
+⚠  Broad claims opening with "Most people"
+⚠  Dramatic cadence, artificial symmetry, forced summaries
+⚠  A forced CTA — one manufactured to close the post rather than earned
+```
+
+Quote the rule number. Do not supply a replacement sentence.
+
+**16 · CTA MATCHES THE BRIEF — added Day 28.**
+
+The Brief carries a `CTA` field: `none` · `question` · `offer`. **The writer does not choose
+it and neither does the rewrite.**
+
+```
+⚠ CTA DRIFT
+  brief:  CTA = none
+  yours:  "What's the one thing you'd change? Drop it below."
+  why:    forced CTAs are a banned pattern, and this one was not in the Brief.
+          The post ended when the idea ended. That was correct.
+```
+
+Also check: **no link in the post body.** First comment only, on every LinkedIn post.
+
+**17 · MOBILE SHAPE — LinkedIn only. Added Day 28.**
+
+```
+⚠  Any block longer than about four lines on a phone
+⚠  A line break after EVERY sentence — breaks separate ideas and arguments,
+   not individual lines. This is the one place LinkedIn differs hardest from
+   the reel-caption rhythm.
+⚠  Special characters faking bold or underline
+```
 
 ---
 
