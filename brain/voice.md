@@ -176,7 +176,30 @@ an audience** rather than typing in a chat. Days away, not months.
 
 # OBSERVED
 
-**Empty until post 1.**
+**No longer empty. Post 1 published 6 Sep 2026, Day 30.**
+
+> **WARNING - this section rests on ONE post, and on a body that was not rewritten at all.**
+> The AI draft for post 1 was lost before the rewrite, so what is recorded below is the diff
+> between the on-disk draft and the published text - a much narrower signal than a real
+> rewrite diff. **Two entries. Nothing here is a rule yet.**
+
+## O1 - the hook is set apart VISUALLY, not only verbally  [1 post]
+
+Published in **full caps** what the draft had in sentence case, and in the same session asked
+for **load-bearing keywords in the body to be bold** from that point on. Two independent
+requests, one instinct.
+
+**What this means for a draft:** a hook that only works because of its words is half-built.
+The emphasis is part of the hook, and the writer emits it. See `linkedin-playbook.md` SS3,
+THE EMPHASIS RULE.
+
+## O2 - he edits by SUBTRACTION  [1 post - watching, not a rule]
+
+The single word-level change in a 1,200-character post was cutting **"my"**. Nothing was
+added anywhere. Direction of travel: blunter, less possessive, shorter.
+
+**Not actionable yet.** One occurrence is taste. If post 2 comes back shorter in the same
+way, the drafting rule in `linkedin-playbook.md` SS3 is what changes - not this file.
 
 **Family 5 — rewrite diffs.** What Shubham changed between the draft and what he actually
 published. This cannot be produced by analysis or interview, because it is a **difference,
