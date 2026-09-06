@@ -164,7 +164,7 @@ from publishing.**
 
 ---
 
-## SKILL STATUS — ✅ **ALL 11 BUILT** *(voice-builder Day 27 · linkedin-writer v2 Day 28)*
+## SKILL STATUS — ✅ **ALL 12 BUILT** *(voice-builder D27 · linkedin-writer v2 D28 · profile-optimizer D29)*
 
 | Skill | State | Pipeline |
 |---|---|---|
@@ -613,6 +613,39 @@ whether it changed since you read it. **The other session was closed at the end 
    what a visitor from the first comment reads. Currently still shows `swipe.md` and "all 10
    skills".
 2. **`daily-push`**, then **PR into `main`**, then Shubham flips visibility himself.
+
+### BUILT LATE DAY 29 — the profile layer
+
+**`engine/skills/profile-optimizer/SKILL.md`** — NEW, 309 lines. **The twelfth skill.**
+Sequenced, one section per pass, diagnostic-gated. READER and VOICE are inputs, never
+hardcoded — same design as `linkedin-writer` v2, so it serves his profile today and points at a
+ghostwriting client later.
+
+**`brain/reference/frameworks/linkedin-profile-sources.md`** — NEW, 287 lines. Three sources
+distilled and kept unmixed: Brian Wagner's `linkedin-profile-optimizer` skill (440 installs),
+Abhijay Vuyyuru's 5-prompt Substack piece, and boredlisted's 10 prompts.
+
+**THE FINDING THAT REORDERED IT: SEQUENCE BEATS STACKING.** Stacking six jobs into one ask
+produces a shallow rewrite of every section instead of a strong one where it matters. **The
+most-installed source does exactly that.** Two sources to one — the skill is sequenced.
+
+**Adaptations, each with a reason:**
+- **No target job descriptions.** Shubham is NOT job hunting — decided Day 29. The JD's job was
+  to be a concrete anchor; **`brain/ledger.md` is the anchor instead.**
+- **The ARTIFACT HOOK replaces every credential check.** All three sources assume press,
+  named clients and scale. He has none. Same substitution already in `linkedin-playbook.md` §2.
+- **OFFER vs CLAIM line drawn.** *"I build content systems for founders"* is an offer and is
+  legitimate. *"I've grown founders' accounts"* is a claim and is NOT-list.
+- **The real headline constraint — ~45 mobile characters — is in none of the three sources.**
+  220 is the LinkedIn maximum, not a target.
+
+**`work/profile/linkedin-audit-day29.md`** — the live-profile audit. **Scored 4/10.**
+Readable version: `https://claude.ai/code/artifact/be840fe8-8991-464e-81de-9930c5efe6bf`
+
+**`work/ideas/queue.md` HAS ENTRIES FOR THE FIRST TIME** — two, both from Shubham:
+the *"isn't AI making our brains dumb?"* corrected-belief story (ring 1, strongest idea in the
+queue, one NOT-list blocker with a recorded workaround), and the new-model / AGI comparison
+(ring 4, `BUCKET = moving`, **launch unverified — must be searched before any post**).
 
 ### POST TWO — decided in principle, not yet a Brief
 

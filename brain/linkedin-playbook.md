@@ -382,6 +382,39 @@ what comes next — gone.
 > **A post can be long when the idea needs the detail. It is never longer than the idea
 > requires.**
 
+## THE EMPHASIS RULE - added Day 30 from post 1
+### Status: [S] single-source - Shubham's own correction, corrections.md 2026-09-06
+
+**The writer emits the emphasis. It is not left for hand-editing after the draft.**
+
+```
+HOOK       Full CAPS, or bold - never both, never neither.
+           Post 1 shipped in caps. Caps is the default until a post says otherwise.
+
+BODY       BOLD the load-bearing words. MAX 3-4 bolded fragments in a whole post.
+           A fragment is 1-4 words. NEVER a whole sentence. NEVER a whole paragraph.
+           If the hook is already CAPS, the first paragraph carries no bold at all -
+           two emphasis systems fighting in the first three lines reads as shouting.
+
+NEVER      Italics (renders inconsistently on mobile).
+           Bold on a line that is already short and alone - it is already emphasised
+           by the whitespace around it.
+```
+
+**THE COST, AND IT IS REAL - state it, do not hide it.** LinkedIn has no rich text. Bold is
+faked with **Unicode mathematical-alphanumeric characters**. Consequences:
+
+- **Screen readers** read them out character by character as "mathematical bold small a", or
+  skip them entirely. A bolded sentence is inaccessible. A bolded 2-word fragment costs the
+  reader almost nothing.
+- **LinkedIn search does not index them.** A bolded keyword is invisible to search. So
+  **never bold the term you want the post found for** - bold the term you want the skimmer to
+  stop on. Those are different words, and this is the part people get backwards.
+
+**Shubham was shown both costs on Day 30 and accepted them.** The 3-4 fragment cap is what
+makes the trade survivable - it is a ceiling, not a target, and a post with zero bold is
+still a passing post.
+
 ## Language and length
 
 ```
